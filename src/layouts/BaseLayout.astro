@@ -70,15 +70,14 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="brand" href="/">
+        <a class="brand" href="/" aria-label="TrovaVeg — Home" title="TrovaVeg">
           <img
             class="brand__logo"
-            src="/logo.png"
+            src="/logo-icon.png"
             width="40"
             height="40"
-            alt="Logo TrovaVeg"
+            alt=""
           />
-          <span class="brand__name">{site.name}</span>
         </a>
         <nav aria-label="Principale">
           <ul class="nav">
