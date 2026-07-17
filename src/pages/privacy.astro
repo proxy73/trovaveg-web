@@ -3,11 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { privacy } from '../content/copy';
 ---
 
-<BaseLayout
-  title={privacy.title}
-  description={privacy.lead}
-  canonicalPath="/privacy"
->
+<BaseLayout title={privacy.title} description={privacy.lead} canonicalPath="/privacy">
   <header class="page-hero">
     <div class="page-hero__inner">
       <h1>{privacy.headline}</h1>

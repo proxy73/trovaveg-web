@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { notFound } from '../content/copy';
+import { site, notFound } from '../content/copy';
 ---
 
 <BaseLayout
@@ -13,9 +13,10 @@ import { notFound } from '../content/copy';
     <div class="error-page__inner">
       <h1>{notFound.headline}</h1>
       <p>{notFound.lead}</p>
-      <p>
-        <a class="btn btn--solid" href="/">{notFound.cta}</a>
-      </p>
+      <div class="hero__actions error-page__actions">
+        <a class="btn btn--outline" href="/">{notFound.ctaHome}</a>
+        <a class="btn btn--primary" href={site.telegramBot}>{notFound.ctaBot}</a>
+      </div>
     </div>
   </div>
 </BaseLayout>

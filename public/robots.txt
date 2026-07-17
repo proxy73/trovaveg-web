@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trovaveg.it/sitemap.xml
+Sitemap: https://trovaveg.com/sitemap.xml

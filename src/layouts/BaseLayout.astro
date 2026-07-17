@@ -48,7 +48,9 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -56,7 +58,6 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
       rel="stylesheet"
     />
 
-    <!-- Cloudflare Web Analytics: sostituire il token placeholder dopo setup -->
     <script
       is:inline
       defer
@@ -70,7 +71,13 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <header class="site-header">
       <div class="site-header__inner">
         <a class="brand" href="/">
-          <img class="brand__logo" src="/logo.svg" width="36" height="36" alt="" />
+          <img
+            class="brand__logo"
+            src="/logo.png"
+            width="40"
+            height="40"
+            alt="Logo TrovaVeg"
+          />
           <span class="brand__name">{site.name}</span>
         </a>
         <nav aria-label="Principale">
@@ -103,18 +110,21 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
       <div class="site-footer__inner">
         <div>
           <p class="site-footer__brand">{site.name}</p>
-          <p class="site-footer__meta">{site.tagline} — {site.description}</p>
+          <p class="site-footer__meta">{site.tagline}</p>
+          <p class="site-footer__meta">{site.description}</p>
         </div>
         <div class="site-footer__links">
           <a href={site.telegramBot}>Bot Telegram</a>
           <a href={site.telegramGroup}>Gruppo</a>
+          <a href={site.instagram}>Instagram {site.instagramHandle}</a>
+          <a href={site.facebook}>Facebook {site.facebookLabel}</a>
           <a href="/bologna">Bologna</a>
           <a href="/firenze">Firenze</a>
           <a href="/privacy">Privacy</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
         <p class="site-footer__note">
-          Email forward da configurare. Nessun account sul sito · Nessun CMS · Nessun database.
+          Guida tascabile su Telegram · Nessun account sul sito · Nessun CMS · Nessun database
         </p>
       </div>
     </footer>

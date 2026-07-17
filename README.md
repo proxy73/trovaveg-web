@@ -35,7 +35,7 @@ npm run preview
 1. **Cloudflare Web Analytics** — token già impostato in `src/content/copy.ts` (`site.cloudflareAnalyticsToken`).
 2. **Email forward** — `info@trovaveg.com`; configurare l’inoltro sul DNS/email provider.
 3. **Asset** — sostituire i placeholder in `/public` (`logo.svg`, `images/*`, `og-default.svg`) con logo e screenshot definitivi.
-4. **Dominio** — `site` in `astro.config.mjs` e `src/content/copy.ts` punta a `https://trovaveg.it`.
+4. **Dominio** — `site` in `astro.config.mjs` e `src/content/copy.ts` punta a `https://trovaveg.com`.
 
 ## Copy
 

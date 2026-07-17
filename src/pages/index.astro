@@ -5,28 +5,72 @@ import { site, home } from '../content/copy';
 
 <BaseLayout title={site.name} description={site.description} canonicalPath="/">
   <section class="hero" aria-labelledby="hero-brand">
-    <div class="hero__media" role="img" aria-label="Atmosfera verdure e tavola — placeholder"></div>
-    <div class="hero__scrim"></div>
-    <div class="hero__content">
-      <p id="hero-brand" class="hero__brand">{site.name}</p>
-      <h1 class="hero__headline">{home.headline}</h1>
-      <p class="hero__lead">{home.lead}</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
-        <a class="btn btn--ghost" href="/bologna">{home.ctaSecondary}</a>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p id="hero-brand" class="hero__brand">{site.name}</p>
+        <h1 class="hero__headline">{home.headline}</h1>
+        <p class="hero__lead">{home.lead}</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+          <a class="btn btn--ghost-dark" href="#come-funziona">{home.ctaSecondary}</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <img
+          class="phone-shot hero__shot"
+          src={home.heroImage.src}
+          width="738"
+          height="1600"
+          alt={home.heroImage.alt}
+          fetchpriority="high"
+        />
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="pillars-title">
+  <section class="section" id="come-funziona" aria-labelledby="how-title">
     <div class="section__inner">
-      <h2 id="pillars-title">{home.pillarsTitle}</h2>
-      <div class="pillars">
+      <h2 id="how-title">{home.howTitle}</h2>
+      <p class="section__lead">{home.howLead}</p>
+      <ol class="steps">
         {
-          home.pillars.map((pillar) => (
-            <article class="pillar">
-              <h3>{pillar.title}</h3>
-              <p>{pillar.text}</p>
+          home.howSteps.map((step, i) => (
+            <li class="step">
+              <span class="step__num" aria-hidden="true">
+                {i + 1}
+              </span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="search-title">
+    <div class="section__inner">
+      <h2 id="search-title">{home.searchTitle}</h2>
+      <p class="section__lead">{home.searchLead}</p>
+      <div class="feature-rows">
+        {
+          home.searchItems.map((item, index) => (
+            <article class:list={['feature-row', index % 2 === 1 && 'feature-row--flip']}>
+              <div class="feature-row__text">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+              <img
+                class="phone-shot feature-row__shot"
+                src={item.image}
+                width="738"
+                height="1600"
+                alt={item.alt}
+                loading="lazy"
+              />
             </article>
           ))
         }
@@ -34,7 +78,7 @@ import { site, home } from '../content/copy';
     </div>
   </section>
 
-  <section class="section section--tight" aria-labelledby="cities-title">
+  <section class="section" aria-labelledby="cities-title">
     <div class="section__inner">
       <h2 id="cities-title">{home.citiesTitle}</h2>
       <p class="section__lead">{home.citiesLead}</p>
@@ -49,6 +93,54 @@ import { site, home } from '../content/copy';
           ))
         }
       </div>
+      <p class="section__note">{home.citiesNote}</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="why-title">
+    <div class="section__inner">
+      <h2 id="why-title">{home.whyTitle}</h2>
+      <p class="section__lead">{home.whyLead}</p>
+      <div class="pillars">
+        {
+          home.whyPoints.map((point) => (
+            <article class="pillar">
+              <h3>{point.title}</h3>
+              <p>{point.text}</p>
+            </article>
+          ))
+        }
+      </div>
+      <div class="cta-band">
+        <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="community-title">
+    <div class="section__inner section__inner--split">
+      <div>
+        <h2 id="community-title">{home.communityTitle}</h2>
+        <p class="section__lead">{home.communityLead}</p>
+        <a class="btn btn--primary" href={site.telegramBot}>{home.communityCta}</a>
+      </div>
+      <img
+        class="phone-shot"
+        src={home.communityImage.src}
+        width="738"
+        height="1600"
+        alt={home.communityImage.alt}
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="limits-title">
+    <div class="section__inner">
+      <h2 id="limits-title">{home.limitsTitle}</h2>
+      <ul class="limits">
+        {home.limits.map((item) => <li>{item}</li>)}
+      </ul>
     </div>
   </section>
 </BaseLayout>
