@@ -55,7 +55,7 @@
 
   --shadow-soft: 0 16px 48px rgba(18, 20, 15, 0.12);
   --max-width: 68rem;
-  --header-h: 4.25rem;
+  --header-h: 5.5rem;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.55s;
@@ -165,9 +165,10 @@ p:last-child {
   position: sticky;
   top: 0;
   z-index: 50;
-  height: var(--header-h);
+  min-height: var(--header-h);
   display: flex;
   align-items: center;
+  padding-block: 0.5rem;
   backdrop-filter: blur(12px);
   background: rgba(250, 252, 248, 0.9);
   border-bottom: 1px solid rgba(197, 205, 192, 0.65);
@@ -193,29 +194,33 @@ p:last-child {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  flex-shrink: 0;
   text-decoration: none;
   color: var(--color-neutral-950);
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
 .brand:hover {
-  color: var(--color-green-800);
+  opacity: 0.92;
 }
 
 .brand__logo {
   display: block;
   width: auto;
   height: auto;
-  max-height: 2.75rem; /* 44px mobile */
-  max-width: min(14rem, 52vw);
+  max-height: 64px;
+  margin: 0;
+  padding: 0;
+  border: 0;
   object-fit: contain;
 }
 
-@media (min-width: 720px) {
-  .brand__logo {
-    max-height: 3rem; /* 48px */
-    max-width: 15.5rem;
-  }
+.header-logo img,
+header img {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .nav {
