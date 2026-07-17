@@ -203,9 +203,17 @@ p:last-child {
 }
 
 .brand__logo {
-  width: 2.5rem;
+  width: auto;
   height: 2.5rem;
+  max-width: 7.5rem; /* ~120px */
   object-fit: contain;
+}
+
+@media (min-width: 720px) {
+  .brand__logo {
+    height: 2.75rem;
+    max-width: 8.5rem;
+  }
 }
 
 .nav {
