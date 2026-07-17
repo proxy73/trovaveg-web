@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { privacy } from '../content/copy';
+---
+
+<BaseLayout
+  title={privacy.title}
+  description={privacy.lead}
+  canonicalPath="/privacy"
+>
+  <header class="page-hero">
+    <div class="page-hero__inner">
+      <h1>{privacy.headline}</h1>
+      <p class="page-hero__lead">{privacy.lead}</p>
+    </div>
+  </header>
+
+  <div class="prose">
+    {
+      privacy.sections.map((section) => (
+        <section class="privacy-section">
+          <h2>{section.title}</h2>
+          <p>{section.text}</p>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

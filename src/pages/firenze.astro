@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, firenze } from '../content/copy';
+---
+
+<BaseLayout
+  title={firenze.title}
+  description={firenze.lead}
+  canonicalPath="/firenze"
+>
+  <header class="page-hero">
+    <div class="page-hero__inner">
+      <span class="page-hero__status">Beta</span>
+      <h1>{firenze.headline}</h1>
+      <p class="page-hero__lead">{firenze.lead}</p>
+    </div>
+  </header>
+
+  <img
+    class="screenshot"
+    src="/images/screenshot-bot-placeholder.svg"
+    width="560"
+    height="720"
+    alt="Anteprima placeholder della chat TrovaVeg su Telegram"
+  />
+
+  <div class="prose">
+    {firenze.body.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+
+  <div class="cta-row">
+    <a class="btn btn--solid" href={site.telegramBot}>{firenze.cta}</a>
+  </div>
+</BaseLayout>

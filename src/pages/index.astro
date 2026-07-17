@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, home } from '../content/copy';
+---
+
+<BaseLayout title={site.name} description={site.description} canonicalPath="/">
+  <section class="hero" aria-labelledby="hero-brand">
+    <div class="hero__media" role="img" aria-label="Atmosfera verdure e tavola — placeholder"></div>
+    <div class="hero__scrim"></div>
+    <div class="hero__content">
+      <p id="hero-brand" class="hero__brand">{site.name}</p>
+      <h1 class="hero__headline">{home.headline}</h1>
+      <p class="hero__lead">{home.lead}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+        <a class="btn btn--ghost" href="/bologna">{home.ctaSecondary}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="pillars-title">
+    <div class="section__inner">
+      <h2 id="pillars-title">{home.pillarsTitle}</h2>
+      <div class="pillars">
+        {
+          home.pillars.map((pillar) => (
+            <article class="pillar">
+              <h3>{pillar.title}</h3>
+              <p>{pillar.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="cities-title">
+    <div class="section__inner">
+      <h2 id="cities-title">{home.citiesTitle}</h2>
+      <p class="section__lead">{home.citiesLead}</p>
+      <div class="city-list">
+        {
+          home.cities.map((city) => (
+            <a class="city-link" href={city.href}>
+              <span class="city-link__status">{city.status}</span>
+              <h3>{city.name}</h3>
+              <p>{city.text}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

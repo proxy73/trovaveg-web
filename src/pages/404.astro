@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { notFound } from '../content/copy';
+---
+
+<BaseLayout
+  title={notFound.title}
+  description={notFound.lead}
+  canonicalPath="/404"
+  noindex={true}
+>
+  <div class="error-page">
+    <div class="error-page__inner">
+      <h1>{notFound.headline}</h1>
+      <p>{notFound.lead}</p>
+      <p>
+        <a class="btn btn--solid" href="/">{notFound.cta}</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

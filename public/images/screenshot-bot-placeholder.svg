@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 720" role="img" aria-label="Screenshot placeholder bot TrovaVeg">
+  <rect width="560" height="720" rx="28" fill="#f3f6f0"/>
+  <rect x="24" y="24" width="512" height="672" rx="20" fill="#ffffff" stroke="#c5cdc0"/>
+  <rect x="24" y="24" width="512" height="64" rx="20" fill="#1a4731"/>
+  <rect x="24" y="68" width="512" height="20" fill="#1a4731"/>
+  <text x="48" y="64" fill="#e4f5ea" font-family="system-ui,sans-serif" font-size="22" font-weight="700">TrovaVeg</text>
+  <rect x="56" y="120" width="280" height="56" rx="16" fill="#e4f5ea"/>
+  <text x="72" y="154" fill="#1c1f18" font-family="system-ui,sans-serif" font-size="16">ristorante Bologna</text>
+  <rect x="160" y="200" width="344" height="120" rx="16" fill="#1f5c3a"/>
+  <text x="176" y="240" fill="#ffffff" font-family="system-ui,sans-serif" font-size="16">Selezione essenziale</text>
+  <text x="176" y="268" fill="#b8e0c6" font-family="system-ui,sans-serif" font-size="14">Meno locali, ma certi.</text>
+  <text x="176" y="294" fill="#b8e0c6" font-family="system-ui,sans-serif" font-size="14">PLACEHOLDER screenshot</text>
+  <rect x="56" y="360" width="300" height="48" rx="14" fill="#fde8e8"/>
+  <rect x="56" y="428" width="260" height="48" rx="14" fill="#e4f5ea"/>
+  <rect x="56" y="496" width="320" height="48" rx="14" fill="#e4f5ea"/>
+  <rect x="40" y="620" width="480" height="52" rx="26" fill="#e2e7de"/>
+  <text x="180" y="652" fill="#4a5244" font-family="system-ui,sans-serif" font-size="15">Messaggio&</text>
+</svg>
