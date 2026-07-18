@@ -29,10 +29,9 @@ const {
   noindex = false,
 } = Astro.props;
 
-const pageTitle =
-  title === site.name || title.startsWith('TrovaVeg')
-    ? title
-    : `${title} · ${site.name}`;
+const pageTitle = title.includes(site.name)
+  ? title
+  : `${title} · ${site.name}`;
 const canonicalUrl = absoluteUrl(canonicalPath);
 const ogImageUrl = absoluteUrl(site.ogImage);
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
