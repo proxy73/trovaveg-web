@@ -4,12 +4,13 @@ import { site, home } from '../content/copy';
 ---
 
 <BaseLayout title={site.name} description={site.description} canonicalPath="/">
-  <section class="hero" aria-labelledby="hero-brand">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="hero__grid">
       <div class="hero__copy">
-        <p id="hero-brand" class="hero__brand">{site.name}</p>
-        <h1 class="hero__headline">{home.headline}</h1>
+        <p class="hero__eyebrow">{site.name}</p>
+        <h1 id="hero-title" class="hero__headline">{home.headline}</h1>
+        <p class="hero__guide">{home.guideMessage}</p>
         <p class="hero__lead">{home.lead}</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>

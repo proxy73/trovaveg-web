@@ -1,12 +1,13 @@
 /**
- * Copy approvato M32 — guida tascabile, meno locali ma certi, meno quantità più qualità.
- * Nessun claim «certificato». Ambito nazionale in prospettiva; oggi Bologna + Firenze.
+ * Copy M32 — guida tascabile.
+ * Messaggio guida: «Meno liste infinite, più risposte utili.»
+ * Nessuna garanzia assoluta; Firenze in beta; solo Bologna/provincia e Firenze.
  */
 export const site = {
   name: 'TrovaVeg',
   tagline: 'La tua guida tascabile veg',
   description:
-    'TrovaVeg è la guida tascabile su Telegram per locali vegani, vegetariani e vegan-friendly. Meno locali ma certi. Meno quantità, più qualità. Oggi a Bologna e Firenze.',
+    'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze. Meno liste infinite, più risposte utili.',
   url: 'https://trovaveg.com',
   locale: 'it_IT',
   telegramBot: 'https://t.me/TrovaVegBot',
@@ -28,8 +29,9 @@ export const nav = [
 ] as const;
 
 export const home = {
-  headline: 'La tua guida tascabile, sempre pronta su Telegram.',
-  lead: 'Locali vegani, vegetariani e vegan-friendly — senza liste infinite e senza rumore. Meno locali ma certi. Meno quantità, più qualità.',
+  headline: 'Trova locali vegan, vegetariani e vegan-friendly',
+  guideMessage: 'Meno liste infinite, più risposte utili.',
+  lead: 'TrovaVeg è una guida su Telegram per cercare locali, piatti, categorie, zone e comuni quando sei in viaggio, in una zona nuova o vuoi decidere rapidamente dove andare.',
   ctaPrimary: 'Apri su Telegram',
   ctaSecondary: 'Come funziona',
   heroImage: {
@@ -79,12 +81,12 @@ export const home = {
 
   citiesTitle: 'Dove siamo oggi',
   citiesLead:
-    'Ambito nazionale in prospettiva. Oggi TrovaVeg è attivo a Bologna e Firenze. Milano e altre città non sono ancora in guida.',
+    'Oggi TrovaVeg è disponibile a Bologna e provincia, e a Firenze in beta.',
   cities: [
     {
       href: '/bologna',
       name: 'Bologna',
-      status: 'Attiva',
+      status: 'Disponibile',
       text: 'Città e provincia: soft launch con selezione essenziale di locali veg.',
     },
     {
@@ -94,7 +96,7 @@ export const home = {
       text: 'Beta attiva: stesse funzioni di Bologna, copertura in crescita con la community.',
     },
   ],
-  citiesNote: 'Milano e altre città: non ancora disponibili. Segnala locali o interessi — ci aiuta a pianificare.',
+  citiesNote: 'Altre città arriveranno nel tempo. Puoi segnalare locali dal bot per aiutarci a crescere.',
 
   whyTitle: 'Perché TrovaVeg',
   whyLead:
@@ -102,11 +104,11 @@ export const home = {
   whyPoints: [
     {
       title: 'Qualità, non quantità',
-      text: 'Preferiamo meno locali ma certi — posti selezionati con cura — piuttosto che liste infinite di dubbia utilità.',
+      text: 'Preferiamo meno locali e più risposte utili — posti selezionati con cura — piuttosto che liste infinite di dubbia utilità.',
     },
     {
       title: 'Meno rumore',
-      text: 'Niente aggregazione selvaggia. Una guida tascabile che punta al utile, non al “tutto”.',
+      text: 'Niente aggregazione selvaggia. Una guida tascabile che punta all’utile, non al “tutto”.',
     },
     {
       title: 'Sempre su Telegram',
@@ -125,9 +127,9 @@ export const home = {
 
   limitsTitle: 'Limiti chiari',
   limits: [
-    'Oggi solo Bologna (città/provincia) e Firenze (beta). Milano e altre città non sono in guida.',
+    'Oggi solo Bologna (città/provincia) e Firenze (beta).',
     'Orari e dettagli in scheda sono indicativi, non in tempo reale. Nessuna prenotazione automatica.',
-    'Non usiamo claim tipo «certificato»: puntiamo a selezione curata e trasparenza sui limiti.',
+    'Non usiamo etichette di garanzia formale: puntiamo a selezione curata e trasparenza sui limiti.',
     'Il sito non ha account, database utente né CMS: l’esperienza viva è sul bot Telegram.',
   ],
 } as const;
@@ -138,7 +140,7 @@ export const bologna = {
   lead: 'Soft launch attivo su città e provincia. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
   body: [
     'A Bologna TrovaVeg funziona come guida tascabile: chiedi un ristorante, una colazione, un bar in centro o un posto vegan-friendly, e ricevi una selezione essenziale.',
-    'Puoi filtrare per categoria, zona o comune, e per tipo veg. Non promettiamo copertura totale: promettiamo meno locali ma certi, e meno quantità più qualità.',
+    'Puoi filtrare per categoria, zona o comune, e per tipo veg. Non promettiamo copertura totale: puntiamo a meno liste infinite e più risposte utili.',
     'Apri il bot in chat privata su Telegram — nessun account sul sito — e inizia da Bologna.',
   ],
   examplesTitle: 'Esempi di ricerca',
@@ -161,7 +163,7 @@ export const firenze = {
   lead: 'Stessa filosofia di Bologna: meno quantità, più qualità. Firenze è in beta attiva — la copertura cresce insieme alle segnalazioni.',
   body: [
     'A Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato. La selezione è in costruzione, con lo stesso standard di cura.',
-    'Non è ancora una copertura completa. È una beta onesta: meno locali ma certi, e spazio per migliorare con il tuo feedback.',
+    'Non è ancora una copertura completa. È una beta onesta: meno liste infinite, più risposte utili — e spazio per migliorare con il tuo feedback.',
     'Prova Firenze sul bot e, se manca un posto che conosci, segnalalo: ogni contributo aiuta la guida.',
   ],
   featuresTitle: 'Cosa puoi fare in beta',
@@ -201,7 +203,7 @@ export const privacy = {
     },
     {
       title: 'Accuratezza dei dati',
-      text: 'Orari, indirizzi e dettagli possono cambiare. Le informazioni in guida sono indicative e aggiornate con cura, ma non in tempo reale. Non usiamo claim di «certificazione»: puntiamo a selezione e trasparenza.',
+      text: 'Orari, indirizzi e dettagli possono cambiare. Le informazioni in guida sono indicative e aggiornate con cura, ma non in tempo reale. Non usiamo etichette di garanzia formale: puntiamo a selezione e trasparenza.',
     },
     {
       title: 'Contatti',
