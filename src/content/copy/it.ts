@@ -128,6 +128,7 @@ export const it = {
       'Oggi solo Bologna (città/provincia) e Firenze (beta).',
       'Orari e dettagli in scheda sono indicativi, non in tempo reale. Nessuna prenotazione automatica.',
       'Non usiamo etichette di garanzia formale: puntiamo a selezione curata e trasparenza sui limiti.',
+      'Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
       'Il sito non ha account, database utente né CMS: l’esperienza viva è sul bot Telegram.',
     ],
   },
@@ -222,7 +223,7 @@ export const it = {
       {
         type: 'text' as const,
         title: 'Accuratezza dei dati',
-        text: 'Orari, indirizzi e dettagli possono cambiare. Le informazioni in guida sono indicative e aggiornate con cura, ma non in tempo reale. Non usiamo etichette di garanzia formale: puntiamo a selezione e trasparenza.',
+        text: 'Orari, indirizzi e dettagli possono cambiare. Le informazioni in guida sono indicative e aggiornate con cura, ma non in tempo reale. Non usiamo etichette di garanzia formale: puntiamo a selezione e trasparenza. Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
       },
       {
         type: 'contacts' as const,
