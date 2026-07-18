@@ -16,7 +16,19 @@ import { privacy } from '../content/copy';
       privacy.sections.map((section) => (
         <section class="privacy-section">
           <h2>{section.title}</h2>
-          <p>{section.text}</p>
+          {'text' in section ? (
+            <p>{section.text}</p>
+          ) : (
+            <>
+              <p>{section.intro}</p>
+              <ul>
+                {section.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <p>{section.note}</p>
+            </>
+          )}
         </section>
       ))
     }

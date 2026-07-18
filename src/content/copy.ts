@@ -207,7 +207,13 @@ export const privacy = {
     },
     {
       title: 'Contatti',
-      text: 'Per richieste relative alla privacy puoi contattare info@trovaveg.com. Bot: https://t.me/TrovaVegBot. Social: Instagram @trovaveg, Facebook TrovaVeg. Quando selezioni un link verso Telegram, Instagram, Facebook o altri servizi esterni, si applicano le informative del servizio di destinazione.',
+      intro: 'Per richieste relative alla privacy puoi scrivere a info@trovaveg.com.',
+      items: [
+        'Bot Telegram: https://t.me/TrovaVegBot',
+        'Instagram: @trovaveg',
+        'Facebook: TrovaVeg',
+      ],
+      note: 'Quando selezioni un link verso Telegram, Instagram, Facebook o altri servizi esterni, si applicano le informative del servizio di destinazione.',
     },
   ],
 } as const;
