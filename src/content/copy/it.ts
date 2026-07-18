@@ -38,7 +38,7 @@ export const it = {
     ctaPrimary: 'Apri su Telegram',
     ctaSecondary: 'Come funziona',
     heroImage: {
-      src: '/screenshot-hero.png',
+      src: '/screenshot-hero.webp',
       alt: 'Schermata Telegram di TrovaVeg con il messaggio di benvenuto del bot',
     },
     howTitle: 'Come funziona',
@@ -63,19 +63,19 @@ export const it = {
       {
         title: 'Categorie',
         text: 'Ristorante, bar, panificio, gelateria e altre tipologie presenti in guida.',
-        image: '/screenshot-categorie.png',
+        image: '/screenshot-categorie.webp',
         alt: 'Schermata TrovaVeg con la scelta delle categorie di locali',
       },
       {
         title: 'Città e zone',
         text: 'Bologna (città e provincia) e Firenze in beta. Zone e comuni dove disponibili.',
-        image: '/screenshot-citta.png',
+        image: '/screenshot-citta.webp',
         alt: 'Schermata TrovaVeg con la selezione di città e zone',
       },
       {
         title: 'Tipo veg',
         text: 'Vegano, vegetariano o vegan-friendly: filtra in base a ciò che ti serve davvero.',
-        image: '/screenshot-vegstatus.png',
+        image: '/screenshot-vegstatus.webp',
         alt: 'Schermata TrovaVeg con i filtri vegano, vegetariano e vegan-friendly',
       },
     ],
@@ -120,7 +120,7 @@ export const it = {
       'TrovaVeg cresce con chi lo usa. Se manca un locale, puoi segnalarlo dal bot: lo controlliamo prima di valutare l’inserimento.',
     communityCta: 'Segnala un locale sul bot',
     communityImage: {
-      src: '/screenshot-segnala.png',
+      src: '/screenshot-segnala.webp',
       alt: 'Schermata TrovaVeg del comando /segnala per proporre un nuovo locale',
     },
     limitsTitle: 'Limiti chiari',
@@ -142,7 +142,7 @@ export const it = {
     cta: 'Cerca a Bologna su Telegram',
     ctaSecondary: null as string | null,
     image: {
-      src: '/screenshot-citta.png',
+      src: '/screenshot-citta.webp',
       alt: 'Schermata TrovaVeg con le opzioni di città e zone per Bologna',
     },
     body: [
@@ -173,7 +173,7 @@ export const it = {
     cta: 'Prova Firenze su Telegram',
     ctaSecondary: 'Segnala un locale',
     image: {
-      src: '/screenshot-segnala.png',
+      src: '/screenshot-segnala.webp',
       alt: 'Schermata TrovaVeg per segnalare un locale mancante a Firenze',
     },
     body: [
