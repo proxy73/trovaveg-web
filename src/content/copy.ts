@@ -187,11 +187,11 @@ export const privacy = {
   sections: [
     {
       title: 'Sito web',
-      text: 'trovaveg.com è un sito statico: niente database, CMS né account utente. Non memorizziamo form né profili qui. L’email info@trovaveg.com serve solo a rispondere alle richieste (inoltro da configurare lato provider).',
+      text: 'trovaveg.com è un sito statico: niente database, CMS né account utente. Non memorizziamo form né profili qui.',
     },
     {
       title: 'Analytics',
-      text: 'Usiamo Cloudflare Web Analytics, orientato alla privacy e senza cookie di tracciamento pubblicitario. I dati aggregati aiutano a capire il traffico del sito, non a profilare le persone.',
+      text: 'Il sito utilizza Cloudflare Web Analytics per comprendere in forma aggregata come viene usato il sito e migliorarne prestazioni e contenuti. Non utilizziamo cookie pubblicitari, pixel di profilazione o strumenti di remarketing. Il sito utilizza anche Google Fonts per la visualizzazione dei caratteri. Il caricamento dei font può comportare una connessione ai server di Google.',
     },
     {
       title: 'Bot Telegram',
@@ -207,7 +207,7 @@ export const privacy = {
     },
     {
       title: 'Contatti',
-      text: 'Privacy e richieste: info@trovaveg.com. Bot: https://t.me/TrovaVegBot. Social: Instagram @trovaveg, Facebook TrovaVeg.',
+      text: 'Per richieste relative alla privacy puoi contattare info@trovaveg.com. Bot: https://t.me/TrovaVegBot. Social: Instagram @trovaveg, Facebook TrovaVeg. Quando selezioni un link verso Telegram, Instagram, Facebook o altri servizi esterni, si applicano le informative del servizio di destinazione.',
     },
   ],
 } as const;
