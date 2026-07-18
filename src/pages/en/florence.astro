@@ -1,0 +1,18 @@
+---
+import CityView from '../../components/CityView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, site } from '../../content/copy';
+
+const copy = getCopy('en');
+---
+
+<BaseLayout
+  locale="en"
+  copy={copy}
+  title={copy.florence.metaTitle}
+  description={copy.florence.metaDescription}
+  canonicalPath="/en/florence"
+  alternateKey="florence"
+>
+  <CityView city={copy.florence} site={site} />
+</BaseLayout>

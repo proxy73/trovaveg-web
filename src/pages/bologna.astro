@@ -1,41 +1,18 @@
 ---
+import CityView from '../components/CityView.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site, bologna } from '../content/copy';
+import { getCopy, site } from '../content/copy';
+
+const copy = getCopy('it');
 ---
 
-<BaseLayout title={bologna.title} description={bologna.lead} canonicalPath="/bologna">
-  <header class="page-hero">
-    <div class="page-hero__inner page-hero__inner--split">
-      <div>
-        <span class="page-hero__status">Attiva</span>
-        <h1>{bologna.headline}</h1>
-        <p class="page-hero__lead">{bologna.lead}</p>
-        <a class="btn btn--primary" href={site.telegramBot}>{bologna.cta}</a>
-      </div>
-      <img
-        class="phone-shot"
-        src={bologna.image.src}
-        width="738"
-        height="1600"
-        alt={bologna.image.alt}
-        fetchpriority="high"
-      />
-    </div>
-  </header>
-
-  <div class="prose">
-    {bologna.body.map((paragraph) => <p>{paragraph}</p>)}
-  </div>
-
-  <section class="section section--tight" aria-labelledby="examples-title">
-    <div class="section__inner">
-      <h2 id="examples-title">{bologna.examplesTitle}</h2>
-      <ul class="chip-list">
-        {bologna.examples.map((ex) => <li><span class="chip">{ex}</span></li>)}
-      </ul>
-      <div class="cta-band">
-        <a class="btn btn--primary" href={site.telegramBot}>{bologna.cta}</a>
-      </div>
-    </div>
-  </section>
+<BaseLayout
+  locale="it"
+  copy={copy}
+  title={copy.bologna.metaTitle}
+  description={copy.bologna.metaDescription}
+  canonicalPath="/bologna"
+  alternateKey="bologna"
+>
+  <CityView city={copy.bologna} site={site} />
 </BaseLayout>

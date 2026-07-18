@@ -1,0 +1,173 @@
+---
+import type { AppCopy } from '../content/copy';
+import type { Site } from '../content/site';
+
+interface Props {
+  copy: AppCopy;
+  site: Site;
+}
+
+const { copy, site } = Astro.props;
+const home = copy.home;
+const limitsIntro = 'limitsIntro' in home ? home.limitsIntro : undefined;
+const finalCta = 'finalCta' in home ? home.finalCta : undefined;
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">{home.eyebrow}</p>
+      <h1 id="hero-title" class="hero__headline">{home.headline}</h1>
+      <p class="hero__guide">{home.guideMessage}</p>
+      <p class="hero__lead">{home.lead}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+        <a class="btn btn--ghost-dark" href="#come-funziona">{home.ctaSecondary}</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <img
+        class="phone-shot hero__shot"
+        src={home.heroImage.src}
+        width="738"
+        height="1600"
+        alt={home.heroImage.alt}
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="come-funziona" aria-labelledby="how-title">
+  <div class="section__inner">
+    <h2 id="how-title">{home.howTitle}</h2>
+    <p class="section__lead">{home.howLead}</p>
+    <ol class="steps">
+      {
+        home.howSteps.map((step, i) => (
+          <li class="step">
+            <span class="step__num" aria-hidden="true">
+              {i + 1}
+            </span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="search-title">
+  <div class="section__inner">
+    <h2 id="search-title">{home.searchTitle}</h2>
+    <p class="section__lead">{home.searchLead}</p>
+    <div class="feature-rows">
+      {
+        home.searchItems.map((item, index) => (
+          <article class:list={['feature-row', index % 2 === 1 && 'feature-row--flip']}>
+            <div class="feature-row__text">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+            <img
+              class="phone-shot feature-row__shot"
+              src={item.image}
+              width="738"
+              height="1600"
+              alt={item.alt}
+              loading="lazy"
+            />
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="cities-title">
+  <div class="section__inner">
+    <h2 id="cities-title">{home.citiesTitle}</h2>
+    {home.citiesLead ? <p class="section__lead">{home.citiesLead}</p> : null}
+    <div class="city-list">
+      {
+        home.cities.map((city) => (
+          <a class="city-link" href={city.href}>
+            <span class="city-link__status">{city.status}</span>
+            <h3>{city.name}</h3>
+            <p>{city.text}</p>
+            {'cta' in city && city.cta ? <span class="city-link__cta">{city.cta}</span> : null}
+          </a>
+        ))
+      }
+    </div>
+    {home.citiesNote ? <p class="section__note">{home.citiesNote}</p> : null}
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="why-title">
+  <div class="section__inner">
+    <h2 id="why-title">{home.whyTitle}</h2>
+    <p class="section__lead">{home.whyLead}</p>
+    <div class="pillars">
+      {
+        home.whyPoints.map((point) => (
+          <article class="pillar">
+            <h3>{point.title}</h3>
+            {point.text ? <p>{point.text}</p> : null}
+          </article>
+        ))
+      }
+    </div>
+    <div class="cta-band">
+      <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="community-title">
+  <div class="section__inner section__inner--split">
+    <div>
+      <h2 id="community-title">{home.communityTitle}</h2>
+      <p class="section__lead">{home.communityLead}</p>
+      <a class="btn btn--primary" href={site.telegramBot}>{home.communityCta}</a>
+    </div>
+    <img
+      class="phone-shot"
+      src={home.communityImage.src}
+      width="738"
+      height="1600"
+      alt={home.communityImage.alt}
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="limits-title">
+  <div class="section__inner">
+    <h2 id="limits-title">{home.limitsTitle}</h2>
+    {limitsIntro ? <p class="section__lead">{limitsIntro}</p> : null}
+    <ul class="limits">
+      {home.limits.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+</section>
+
+{
+  finalCta ? (
+    <section class="section section--alt" aria-labelledby="final-cta-title">
+      <div class="section__inner">
+        <h2 id="final-cta-title">{finalCta.title}</h2>
+        <p class="section__lead">{finalCta.text}</p>
+        <div class="cta-band">
+          <a class="btn btn--primary" href={site.telegramBot}>
+            {finalCta.cta}
+          </a>
+        </div>
+      </div>
+    </section>
+  ) : null
+}

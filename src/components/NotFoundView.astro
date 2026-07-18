@@ -1,0 +1,23 @@
+---
+import type { AppCopy } from '../content/copy';
+import type { Site } from '../content/site';
+
+interface Props {
+  copy: AppCopy;
+  site: Site;
+}
+
+const { copy, site } = Astro.props;
+const notFound = copy.notFound;
+---
+
+<div class="error-page">
+  <div class="error-page__inner">
+    <h1>{notFound.headline}</h1>
+    <p>{notFound.lead}</p>
+    <div class="hero__actions error-page__actions">
+      <a class="btn btn--outline" href={notFound.homeHref}>{notFound.ctaHome}</a>
+      <a class="btn btn--primary" href={site.telegramBot}>{notFound.ctaBot}</a>
+    </div>
+  </div>
+</div>

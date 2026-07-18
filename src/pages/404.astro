@@ -1,22 +1,19 @@
 ---
+import NotFoundView from '../components/NotFoundView.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site, notFound } from '../content/copy';
+import { getCopy, site } from '../content/copy';
+
+const copy = getCopy('it');
 ---
 
 <BaseLayout
-  title={notFound.title}
-  description={notFound.lead}
+  locale="it"
+  copy={copy}
+  title={copy.notFound.metaTitle}
+  description={copy.notFound.metaDescription}
   canonicalPath="/404"
+  alternateKey="notFound"
   noindex={true}
 >
-  <div class="error-page">
-    <div class="error-page__inner">
-      <h1>{notFound.headline}</h1>
-      <p>{notFound.lead}</p>
-      <div class="hero__actions error-page__actions">
-        <a class="btn btn--outline" href="/">{notFound.ctaHome}</a>
-        <a class="btn btn--primary" href={site.telegramBot}>{notFound.ctaBot}</a>
-      </div>
-    </div>
-  </div>
+  <NotFoundView copy={copy} site={site} />
 </BaseLayout>

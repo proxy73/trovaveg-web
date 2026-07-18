@@ -1,0 +1,19 @@
+---
+import NotFoundView from '../../components/NotFoundView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, site } from '../../content/copy';
+
+const copy = getCopy('en');
+---
+
+<BaseLayout
+  locale="en"
+  copy={copy}
+  title={copy.notFound.metaTitle}
+  description={copy.notFound.metaDescription}
+  canonicalPath="/en/404"
+  alternateKey="notFound"
+  noindex={true}
+>
+  <NotFoundView copy={copy} site={site} />
+</BaseLayout>

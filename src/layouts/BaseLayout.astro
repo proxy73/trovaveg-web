@@ -1,31 +1,53 @@
 ---
-import { site, nav } from '../content/copy';
+import {
+  absoluteUrl,
+  getLanguageSwitchHref,
+  type AlternateKey,
+  type AppCopy,
+  type Locale,
+  site,
+} from '../content/copy';
 import '../styles/global.css';
 
 interface Props {
+  locale: Locale;
+  copy: AppCopy;
   title: string;
-  description?: string;
-  canonicalPath?: string;
-  ogImage?: string;
+  description: string;
+  canonicalPath: string;
+  alternateKey: AlternateKey;
   noindex?: boolean;
 }
 
 const {
+  locale,
+  copy,
   title,
-  description = site.description,
-  canonicalPath = '/',
-  ogImage = site.ogImage,
+  description,
+  canonicalPath,
+  alternateKey,
   noindex = false,
 } = Astro.props;
 
-const pageTitle = title === site.name ? site.name : `${title} · ${site.name}`;
-const canonicalUrl = new URL(canonicalPath, site.url).toString();
-const ogImageUrl = new URL(ogImage, site.url).toString();
+const pageTitle =
+  title === site.name || title.startsWith('TrovaVeg')
+    ? title
+    : `${title} · ${site.name}`;
+const canonicalUrl = absoluteUrl(canonicalPath);
+const ogImageUrl = absoluteUrl(site.ogImage);
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const homeHref = locale === 'it' ? '/' : '/en';
+const showHreflang = !noindex;
+const switchItHref = getLanguageSwitchHref(alternateKey, 'it');
+const switchEnHref = getLanguageSwitchHref(alternateKey, 'en');
+const itAbs = absoluteUrl(switchItHref);
+const enAbs = absoluteUrl(switchEnHref);
+const ogLocale = copy.ogLocale;
+const ogLocaleAlt = locale === 'it' ? 'en_US' : 'it_IT';
 ---
 
 <!doctype html>
-<html lang="it">
+<html lang={copy.htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,8 +57,19 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+    {
+      showHreflang && (
+        <>
+          <link rel="alternate" hreflang="it" href={itAbs} />
+          <link rel="alternate" hreflang="en" href={enAbs} />
+          <link rel="alternate" hreflang="x-default" href={absoluteUrl('/')} />
+        </>
+      )
+    }
+
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={site.locale} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -66,11 +99,11 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
     ></script>
   </head>
   <body>
-    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <a class="skip-link" href="#contenuto">{copy.ui.skipToContent}</a>
 
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="brand" href="/" aria-label="TrovaVeg" title="TrovaVeg">
+        <a class="brand" href={homeHref} aria-label="TrovaVeg" title="TrovaVeg">
           <img
             class="brand__logo"
             src="/logo.png"
@@ -88,16 +121,16 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
           aria-expanded="false"
         >
           <span class="nav-toggle__icon" aria-hidden="true"></span>
-          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__label">{copy.ui.menuLabel}</span>
         </button>
 
-        <nav class="site-nav" id="site-nav" aria-label="Principale">
+        <nav class="site-nav" id="site-nav" aria-label={copy.ui.navAriaLabel}>
           <ul class="nav">
             {
-              nav.map((item) => {
+              copy.nav.map((item) => {
                 const current =
-                  item.href === '/'
-                    ? pathname === '/'
+                  item.href === '/' || item.href === '/en'
+                    ? pathname === item.href
                     : pathname === item.href || pathname.startsWith(`${item.href}/`);
                 return (
                   <li>
@@ -108,6 +141,33 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
                 );
               })
             }
+            <li class="lang-switch">
+              <span class="lang-switch__label" id="lang-switch-label">
+                {copy.ui.languageLabel}
+              </span>
+              <ul class="lang-switch__list" aria-labelledby="lang-switch-label">
+                <li>
+                  <a
+                    href={switchItHref}
+                    lang="it"
+                    hreflang="it"
+                    aria-current={locale === 'it' ? 'page' : undefined}
+                  >
+                    {copy.ui.langIt}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={switchEnHref}
+                    lang="en"
+                    hreflang="en"
+                    aria-current={locale === 'en' ? 'page' : undefined}
+                  >
+                    {copy.ui.langEn}
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -121,22 +181,32 @@ const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
       <div class="site-footer__inner">
         <div>
           <p class="site-footer__brand">{site.name}</p>
-          <p class="site-footer__meta">{site.tagline}</p>
-          <p class="site-footer__meta">{site.description}</p>
+          <p class="site-footer__meta">{copy.siteChrome.tagline}</p>
+          <p class="site-footer__meta">{copy.siteChrome.description}</p>
+          {
+            'availability' in copy.siteChrome && copy.siteChrome.availability ? (
+              <p class="site-footer__meta">{copy.siteChrome.availability}</p>
+            ) : null
+          }
         </div>
         <div class="site-footer__links">
-          <a href={site.telegramBot}>Bot Telegram</a>
-          <a href={site.telegramGroup}>Gruppo</a>
+          <a href={site.telegramBot}>
+            {'footerCta' in copy.siteChrome && copy.siteChrome.footerCta
+              ? copy.siteChrome.footerCta
+              : copy.ui.footerBot}
+          </a>
           <a href={site.instagram}>Instagram {site.instagramHandle}</a>
           <a href={site.facebook}>Facebook {site.facebookLabel}</a>
-          <a href="/bologna">Bologna</a>
-          <a href="/firenze">Firenze</a>
-          <a href="/privacy">Privacy</a>
+          {
+            copy.nav
+              .filter((item) => item.href !== '/' && item.href !== '/en')
+              .map((item) => (
+                <a href={item.href}>{item.label}</a>
+              ))
+          }
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
-        <p class="site-footer__note">
-          Guida tascabile su Telegram · Nessun account sul sito · Nessun CMS · Nessun database
-        </p>
+        <p class="site-footer__note">{copy.ui.footerNote}</p>
       </div>
     </footer>
 
