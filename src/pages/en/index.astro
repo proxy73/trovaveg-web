@@ -1,0 +1,18 @@
+---
+import HomeView from '../../components/HomeView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, site } from '../../content/copy';
+
+const copy = getCopy('en');
+---
+
+<BaseLayout
+  locale="en"
+  copy={copy}
+  title={copy.home.metaTitle}
+  description={copy.home.metaDescription}
+  canonicalPath="/en"
+  alternateKey="home"
+>
+  <HomeView copy={copy} site={site} />
+</BaseLayout>

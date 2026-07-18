@@ -1,0 +1,18 @@
+---
+import PrivacyView from '../../components/PrivacyView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, site } from '../../content/copy';
+
+const copy = getCopy('en');
+---
+
+<BaseLayout
+  locale="en"
+  copy={copy}
+  title={copy.privacy.metaTitle}
+  description={copy.privacy.metaDescription}
+  canonicalPath="/en/privacy"
+  alternateKey="privacy"
+>
+  <PrivacyView copy={copy} site={site} />
+</BaseLayout>

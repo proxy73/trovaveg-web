@@ -1,0 +1,88 @@
+---
+import type { AppCopy } from '../content/copy';
+import type { Site } from '../content/site';
+
+interface Props {
+  copy: AppCopy;
+  site: Site;
+}
+
+const { copy, site } = Astro.props;
+const privacy = copy.privacy;
+
+function contactHref(key: 'telegramBot' | 'instagram' | 'facebook') {
+  return site[key];
+}
+
+function contactLabel(
+  item: {
+    label: string;
+    linkText?: string;
+    linkTextKey?: 'instagramHandle' | 'facebookLabel';
+  },
+) {
+  if (item.linkText) return item.linkText;
+  if (item.linkTextKey === 'instagramHandle') return site.instagramHandle;
+  if (item.linkTextKey === 'facebookLabel') return site.facebookLabel;
+  return item.label;
+}
+---
+
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <h1>{privacy.headline}</h1>
+    <p class="page-hero__lead">{privacy.lead}</p>
+  </div>
+</header>
+
+<div class="prose">
+  {
+    privacy.sections.map((section) => {
+      if (section.type === 'text') {
+        return (
+          <section class="privacy-section">
+            <h2>{section.title}</h2>
+            <p>{section.text}</p>
+          </section>
+        );
+      }
+
+      if (section.type === 'list') {
+        return (
+          <section class="privacy-section">
+            <h2>{section.title}</h2>
+            {'intro' in section && section.intro ? <p>{section.intro}</p> : null}
+            <ul>
+              {section.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </section>
+        );
+      }
+
+      if (section.type === 'contacts') {
+        return (
+          <section class="privacy-section">
+            <h2>{section.title}</h2>
+            <p>
+              {section.introPrefix}
+              <a href={`mailto:${site.email}`}>{site.email}</a>.
+            </p>
+            <ul>
+              {section.items.map((item) => (
+                <li>
+                  {item.label}:{' '}
+                  <a href={contactHref(item.hrefKey)}>{contactLabel(item)}</a>
+                </li>
+              ))}
+            </ul>
+            <p>{section.note}</p>
+          </section>
+        );
+      }
+
+      return null;
+    })
+  }
+</div>

@@ -1,0 +1,144 @@
+---
+import type { Site } from '../content/site';
+
+type CitySection =
+  | { type: 'examples'; title: string; items: readonly string[] }
+  | { type: 'list'; title: string; items: readonly string[] }
+  | {
+      type: 'text';
+      title: string;
+      paragraphs: readonly string[];
+      cta?: string;
+    };
+
+interface CityContent {
+  status: string;
+  headline: string;
+  lead: string;
+  cta: string;
+  ctaSecondary: string | null;
+  image: { src: string; alt: string };
+  body: readonly string[];
+  sections: readonly CitySection[];
+}
+
+interface Props {
+  city: CityContent;
+  site: Site;
+}
+
+const { city, site } = Astro.props;
+---
+
+<header class="page-hero">
+  <div class="page-hero__inner page-hero__inner--split">
+    <div>
+      <span class="page-hero__status">{city.status}</span>
+      <h1>{city.headline}</h1>
+      <p class="page-hero__lead">{city.lead}</p>
+      {
+        city.ctaSecondary ? (
+          <div class="hero__actions">
+            <a class="btn btn--primary" href={site.telegramBot}>
+              {city.cta}
+            </a>
+            <a class="btn btn--outline" href={site.telegramBot}>
+              {city.ctaSecondary}
+            </a>
+          </div>
+        ) : (
+          <a class="btn btn--primary" href={site.telegramBot}>
+            {city.cta}
+          </a>
+        )
+      }
+    </div>
+    <img
+      class="phone-shot"
+      src={city.image.src}
+      width="738"
+      height="1600"
+      alt={city.image.alt}
+      fetchpriority="high"
+    />
+  </div>
+</header>
+
+{
+  city.body.length > 0 ? (
+    <div class="prose">
+      {city.body.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </div>
+  ) : null
+}
+
+{
+  city.sections.map((section) => {
+    if (section.type === 'examples') {
+      return (
+        <section class="section section--tight" aria-labelledby={`${section.title}-title`}>
+          <div class="section__inner">
+            <h2 id={`${section.title}-title`}>{section.title}</h2>
+            <ul class="chip-list">
+              {section.items.map((ex) => (
+                <li>
+                  <span class="chip">{ex}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="cta-band">
+              <a class="btn btn--primary" href={site.telegramBot}>
+                {city.cta}
+              </a>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === 'list') {
+      return (
+        <section class="section section--tight" aria-labelledby={`${section.title}-title`}>
+          <div class="section__inner">
+            <h2 id={`${section.title}-title`}>{section.title}</h2>
+            <ul class="limits">
+              {section.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="cta-band">
+              <a class="btn btn--primary" href={site.telegramBot}>
+                {city.cta}
+              </a>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === 'text') {
+      const sectionCta = 'cta' in section ? section.cta : undefined;
+      return (
+        <section class="section section--tight" aria-labelledby={`${section.title}-title`}>
+          <div class="section__inner">
+            <h2 id={`${section.title}-title`}>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p class="section__lead">{paragraph}</p>
+            ))}
+            {sectionCta ? (
+              <div class="cta-band">
+                <a class="btn btn--primary" href={site.telegramBot}>
+                  {sectionCta}
+                </a>
+              </div>
+            ) : null}
+          </div>
+        </section>
+      );
+    }
+
+    return null;
+  })
+}
