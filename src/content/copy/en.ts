@@ -41,7 +41,7 @@ export const en = {
     ctaPrimary: 'Open on Telegram',
     ctaSecondary: 'How it works',
     heroImage: {
-      src: '/screenshot-hero.png',
+      src: '/screenshot-hero.webp',
       alt: 'Telegram screen of TrovaVeg with the bot welcome message',
     },
     howTitle: 'How it works',
@@ -67,19 +67,19 @@ export const en = {
       {
         title: 'Dishes and categories',
         text: 'Looking for breakfast, pizza, burgers, desserts or something else? Start from what you feel like eating.',
-        image: '/screenshot-categorie.png',
+        image: '/screenshot-categorie.webp',
         alt: 'TrovaVeg screen with place category choices',
       },
       {
         title: 'Areas and towns',
         text: 'Search by neighbourhood, area, city or municipality.',
-        image: '/screenshot-citta.png',
+        image: '/screenshot-citta.webp',
         alt: 'TrovaVeg screen with city and area selection',
       },
       {
         title: 'Your preferences',
         text: 'Look for vegan, vegetarian and vegan-friendly options.',
-        image: '/screenshot-vegstatus.png',
+        image: '/screenshot-vegstatus.webp',
         alt: 'TrovaVeg screen with vegan, vegetarian and vegan-friendly filters',
       },
     ],
@@ -132,7 +132,7 @@ export const en = {
       'TrovaVeg grows with the community. You can suggest new places or report information that needs updating directly through the bot.',
     communityCta: 'Open TrovaVeg on Telegram',
     communityImage: {
-      src: '/screenshot-segnala.png',
+      src: '/screenshot-segnala.webp',
       alt: 'TrovaVeg screen for suggesting a new place',
     },
     limitsTitle: 'Clear limits, no surprises',
@@ -163,7 +163,7 @@ export const en = {
     cta: 'Search Bologna on Telegram',
     ctaSecondary: null as string | null,
     image: {
-      src: '/screenshot-citta.png',
+      src: '/screenshot-citta.webp',
       alt: 'TrovaVeg screen with city and area options for Bologna',
     },
     body: [] as string[],
@@ -224,7 +224,7 @@ export const en = {
     cta: 'Search Florence on Telegram',
     ctaSecondary: 'Help improve Florence',
     image: {
-      src: '/screenshot-segnala.png',
+      src: '/screenshot-segnala.webp',
       alt: 'TrovaVeg screen for suggesting a missing place in Florence',
     },
     body: [] as string[],
