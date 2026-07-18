@@ -207,11 +207,24 @@ export const privacy = {
     },
     {
       title: 'Contatti',
-      intro: 'Per richieste relative alla privacy puoi scrivere a info@trovaveg.com.',
+      introPrefix: 'Per richieste relative alla privacy puoi scrivere a ',
+      email: site.email,
       items: [
-        'Bot Telegram: https://t.me/TrovaVegBot',
-        'Instagram: @trovaveg',
-        'Facebook: TrovaVeg',
+        {
+          label: 'Bot Telegram',
+          linkText: 'Apri TrovaVeg su Telegram',
+          href: site.telegramBot,
+        },
+        {
+          label: 'Instagram',
+          linkText: site.instagramHandle,
+          href: site.instagram,
+        },
+        {
+          label: 'Facebook',
+          linkText: site.facebookLabel,
+          href: site.facebook,
+        },
       ],
       note: 'Quando selezioni un link verso Telegram, Instagram, Facebook o altri servizi esterni, si applicano le informative del servizio di destinazione.',
     },

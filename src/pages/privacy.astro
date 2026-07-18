@@ -20,10 +20,15 @@ import { privacy } from '../content/copy';
             <p>{section.text}</p>
           ) : (
             <>
-              <p>{section.intro}</p>
+              <p>
+                {section.introPrefix}
+                <a href={`mailto:${section.email}`}>{section.email}</a>.
+              </p>
               <ul>
                 {section.items.map((item) => (
-                  <li>{item}</li>
+                  <li>
+                    {item.label}: <a href={item.href}>{item.linkText}</a>
+                  </li>
                 ))}
               </ul>
               <p>{section.note}</p>
