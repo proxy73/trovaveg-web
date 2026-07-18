@@ -16,7 +16,24 @@ import { privacy } from '../content/copy';
       privacy.sections.map((section) => (
         <section class="privacy-section">
           <h2>{section.title}</h2>
-          <p>{section.text}</p>
+          {'text' in section ? (
+            <p>{section.text}</p>
+          ) : (
+            <>
+              <p>
+                {section.introPrefix}
+                <a href={`mailto:${section.email}`}>{section.email}</a>.
+              </p>
+              <ul>
+                {section.items.map((item) => (
+                  <li>
+                    {item.label}: <a href={item.href}>{item.linkText}</a>
+                  </li>
+                ))}
+              </ul>
+              <p>{section.note}</p>
+            </>
+          )}
         </section>
       ))
     }
