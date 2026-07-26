@@ -25,9 +25,9 @@ export const it = {
   },
   nav: [
     { href: '/', label: 'Home' },
-    { href: '/bologna', label: 'Bologna' },
-    { href: '/firenze', label: 'Firenze' },
-    { href: '/privacy', label: 'Privacy' },
+    { href: '/bologna/', label: 'Bologna' },
+    { href: '/firenze/', label: 'Firenze' },
+    { href: '/privacy/', label: 'Privacy' },
   ],
   home: {
     metaTitle: 'TrovaVeg',
@@ -89,13 +89,13 @@ export const it = {
       'Oggi TrovaVeg è disponibile a Bologna e provincia, e a Firenze in beta.',
     cities: [
       {
-        href: '/bologna',
+        href: '/bologna/',
         name: 'Bologna',
         status: 'Disponibile',
         text: 'Città e provincia: soft launch con selezione essenziale di locali veg.',
       },
       {
-        href: '/firenze',
+        href: '/firenze/',
         name: 'Firenze',
         status: 'Beta',
         text: 'Beta attiva: stesse funzioni di Bologna, copertura in crescita con la community.',
@@ -264,6 +264,7 @@ export const it = {
     lead: 'Torna alla home oppure apri direttamente la guida su Telegram.',
     ctaHome: 'Torna alla home',
     homeHref: '/',
+
     ctaBot: 'Apri su Telegram',
   },
 } as const;

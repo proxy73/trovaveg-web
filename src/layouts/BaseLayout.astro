@@ -2,6 +2,7 @@
 import {
   absoluteUrl,
   getLanguageSwitchHref,
+  normalizePath,
   type AlternateKey,
   type AppCopy,
   type Locale,
@@ -34,8 +35,8 @@ const pageTitle = title.includes(site.name)
   : `${title} · ${site.name}`;
 const canonicalUrl = absoluteUrl(canonicalPath);
 const ogImageUrl = absoluteUrl(site.ogImage);
-const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
-const homeHref = locale === 'it' ? '/' : '/en';
+const pathname = normalizePath(Astro.url.pathname);
+const homeHref = locale === 'it' ? '/' : '/en/';
 const showHreflang = !noindex;
 const switchItHref = getLanguageSwitchHref(alternateKey, 'it');
 const switchEnHref = getLanguageSwitchHref(alternateKey, 'en');
@@ -127,10 +128,11 @@ const ogLocaleAlt = locale === 'it' ? 'en_US' : 'it_IT';
           <ul class="nav">
             {
               copy.nav.map((item) => {
+                const hrefNorm = normalizePath(item.href);
                 const current =
-                  item.href === '/' || item.href === '/en'
-                    ? pathname === item.href
-                    : pathname === item.href || pathname.startsWith(`${item.href}/`);
+                  hrefNorm === '/' || hrefNorm === '/en'
+                    ? pathname === hrefNorm
+                    : pathname === hrefNorm || pathname.startsWith(`${hrefNorm}/`);
                 return (
                   <li>
                     <a href={item.href} aria-current={current ? 'page' : undefined}>
@@ -203,7 +205,10 @@ const ogLocaleAlt = locale === 'it' ? 'en_US' : 'it_IT';
           <a href={site.facebook}>Facebook {site.facebookLabel}</a>
           {
             copy.nav
-              .filter((item) => item.href !== '/' && item.href !== '/en')
+              .filter((item) => {
+                const hrefNorm = normalizePath(item.href);
+                return hrefNorm !== '/' && hrefNorm !== '/en';
+              })
               .map((item) => (
                 <a href={item.href}>{item.label}</a>
               ))
