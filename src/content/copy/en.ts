@@ -27,10 +27,10 @@ export const en = {
     footerCta: 'Open TrovaVeg on Telegram',
   },
   nav: [
-    { href: '/en', label: 'Home' },
-    { href: '/en/bologna', label: 'Bologna' },
-    { href: '/en/florence', label: 'Florence' },
-    { href: '/en/privacy', label: 'Privacy' },
+    { href: '/en/', label: 'Home' },
+    { href: '/en/bologna/', label: 'Bologna' },
+    { href: '/en/florence/', label: 'Florence' },
+    { href: '/en/privacy/', label: 'Privacy' },
   ],
   home: {
     metaTitle: 'TrovaVeg | Find vegan, vegetarian and vegan-friendly places',
@@ -92,14 +92,14 @@ export const en = {
     citiesLead: '',
     cities: [
       {
-        href: '/en/bologna',
+        href: '/en/bologna/',
         name: 'Bologna and its province',
         status: 'Available',
         text: 'Search places across Bologna and nearby municipalities.',
         cta: 'Explore Bologna',
       },
       {
-        href: '/en/florence',
+        href: '/en/florence/',
         name: 'Florence',
         status: 'Beta',
         text: 'TrovaVeg is available in beta while coverage continues to grow.',
@@ -349,7 +349,7 @@ export const en = {
     headline: 'This page is not here.',
     lead: 'The link may be outdated or the page may have moved. You can return to the English home page or open TrovaVeg on Telegram.',
     ctaHome: 'Go to the English home page',
-    homeHref: '/en',
+    homeHref: '/en/',
     ctaBot: 'Open TrovaVeg on Telegram',
   },
 } as const;
