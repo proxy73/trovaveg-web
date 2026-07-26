@@ -1,8 +1,17 @@
 # TrovaVeg Web
 
-Sito statico di [TrovaVeg](https://t.me/TrovaVegBot) — guida tascabile per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze.
+Landing statica bilingue (IT/EN) di [TrovaVeg](https://t.me/TrovaVegBot).
 
-**Stack:** Astro (`output: 'static'`) · CSS nativo con design token · nessun database, CMS o account.
+Il sito spiega il progetto e indirizza al bot Telegram. La ricerca dei locali
+avviene nel bot, non sul sito; per usarla serve Telegram. Non esiste un’app
+TrovaVeg separata e non serve un account sul sito.
+
+**Copertura attuale:** Bologna e provincia disponibili; Firenze in beta.
+
+**Stack:** Astro (`output: 'static'`) · CSS nativo con design token · nessun
+database, CMS, account o backend web · hosting su Cloudflare Pages · Cloudflare
+Web Analytics (privacy-safe). Nessuna dipendenza diretta dal runtime Railway del
+bot.
 
 Repository: [proxy73/trovaveg-web](https://github.com/proxy73/trovaveg-web)
 
@@ -10,11 +19,16 @@ Repository: [proxy73/trovaveg-web](https://github.com/proxy73/trovaveg-web)
 
 | Percorso | Contenuto |
 |----------|-----------|
-| `/` | Home |
-| `/bologna` | Soft launch Bologna |
-| `/firenze` | Beta Firenze |
-| `/privacy` | Privacy |
-| `404` | Pagina non trovata |
+| `/` | Home italiana |
+| `/bologna` | Bologna e provincia |
+| `/firenze` | Firenze (beta) |
+| `/privacy` | Privacy (IT) |
+| `/en` | Home inglese |
+| `/en/bologna` | Bologna (EN) |
+| `/en/florence` | Florence (beta) |
+| `/en/privacy` | Privacy (EN) |
+| `404` | Pagina non trovata (IT, risposta 404 reale) |
+| `/en/404` | Pagina informativa 404 (EN) |
 
 ## Sviluppo
 
@@ -27,19 +41,18 @@ Build statico in `dist/`:
 
 ```bash
 npm run build
-npm run preview
 ```
 
-## Configurazione post-deploy
+## Contenuti e asset
 
-1. **Cloudflare Web Analytics** — token già impostato in `src/content/copy.ts` (`site.cloudflareAnalyticsToken`).
-2. **Email forward** — `info@trovaveg.com`; configurare l’inoltro sul DNS/email provider.
-3. **Asset** — sostituire i placeholder in `/public` (`logo.svg`, `images/*`, `og-default.svg`) con logo e screenshot definitivi.
-4. **Dominio** — `site` in `astro.config.mjs` e `src/content/copy.ts` punta a `https://trovaveg.com`.
+- Invarianti di sito (URL bot, social, email pubblica): `src/content/site.ts`
+- Copy localizzato: `src/content/copy/it.ts`, `src/content/copy/en.ts`
+- Screenshot pubblici ottimizzati in WebP sotto `/public`
 
-## Copy
+Contatto pubblico: `info@trovaveg.com`.
 
-Testi allineati al posizionamento M32-C: *guida tascabile*, *meno locali ma certi*, *meno quantità più qualità* — centralizzati in `src/content/copy.ts`.
+Il sito usa Cloudflare Web Analytics e Google Fonts; dettagli nella pagina
+Privacy.
 
 ## Licenza
 
