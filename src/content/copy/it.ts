@@ -20,6 +20,8 @@ export const it = {
     tagline: 'La tua guida tascabile veg',
     description:
       'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze. Meno liste infinite, più risposte utili.',
+    independentNote:
+      'TrovaVeg è un progetto indipendente in crescita, costruito con il supporto della community.',
   },
   nav: [
     { href: '/', label: 'Home' },
@@ -34,15 +36,18 @@ export const it = {
     eyebrow: 'TrovaVeg',
     headline: 'Trova locali vegan, vegetariani e vegan-friendly',
     guideMessage: 'Meno liste infinite, più risposte utili.',
-    lead: 'TrovaVeg è una guida su Telegram per cercare locali, piatti, categorie, zone e comuni quando sei in viaggio, in una zona nuova o vuoi decidere rapidamente dove andare.',
-    ctaPrimary: 'Apri su Telegram',
+    lead: 'TrovaVeg è un bot Telegram per trovare locali vegan, vegetariani e vegan-friendly. Questo sito spiega come funziona: la ricerca avviene direttamente nel bot.',
+    ctaPrimary: 'Apri il bot su Telegram',
+    ctaNote:
+      'Per usare il bot serve Telegram. Non devi scaricare un’app TrovaVeg né creare un account sul sito.',
     ctaSecondary: 'Come funziona',
     heroImage: {
       src: '/screenshot-hero.webp',
       alt: 'Schermata Telegram di TrovaVeg con il messaggio di benvenuto del bot',
     },
     howTitle: 'Come funziona',
-    howLead: 'Niente app da scaricare, niente account sul sito. Apri Telegram e parti.',
+    howLead:
+      'Non devi scaricare un’app TrovaVeg né creare un account sul sito. Per cercare i locali serve Telegram: apri il bot e parti.',
     howSteps: [
       {
         title: 'Apri il bot',
@@ -117,7 +122,7 @@ export const it = {
     ],
     communityTitle: 'Community e segnalazioni',
     communityLead:
-      'TrovaVeg cresce con chi lo usa. Se manca un locale, puoi segnalarlo dal bot: lo controlliamo prima di valutare l’inserimento.',
+      'Per suggerire un nuovo locale o segnalare informazioni da aggiornare, apri TrovaVeg su Telegram e invia il comando /segnala.',
     communityCta: 'Segnala un locale sul bot',
     communityImage: {
       src: '/screenshot-segnala.webp',
@@ -139,7 +144,8 @@ export const it = {
     status: 'Attiva',
     headline: 'Bologna, in tasca.',
     lead: 'Soft launch attivo su città e provincia. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
-    cta: 'Cerca a Bologna su Telegram',
+    cta: 'Cerca Bologna',
+    ctaAriaLabel: 'Cerca Bologna nel bot Telegram',
     ctaSecondary: null as string | null,
     image: {
       src: '/screenshot-citta.webp',
@@ -170,7 +176,8 @@ export const it = {
     status: 'Beta',
     headline: 'Firenze, in beta.',
     lead: 'Stessa filosofia di Bologna: meno quantità, più qualità. Firenze è in beta attiva — la copertura cresce insieme alle segnalazioni.',
-    cta: 'Prova Firenze su Telegram',
+    cta: 'Cerca Firenze',
+    ctaAriaLabel: 'Cerca Firenze nel bot Telegram',
     ctaSecondary: 'Segnala un locale',
     image: {
       src: '/screenshot-segnala.webp',
@@ -179,7 +186,7 @@ export const it = {
     body: [
       'A Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato. La selezione è in costruzione, con lo stesso standard di cura.',
       'Non è ancora una copertura completa. È una beta onesta: meno liste infinite, più risposte utili — e spazio per migliorare con il tuo feedback.',
-      'Prova Firenze sul bot e, se manca un posto che conosci, segnalalo: ogni contributo aiuta la guida.',
+      'Hai trovato un locale mancante o informazioni da aggiornare? Apri TrovaVeg su Telegram e invia il comando /segnala. Ogni contributo aiuta la guida.',
     ],
     sections: [
       {
@@ -188,7 +195,7 @@ export const it = {
         items: [
           'Ricerca per categoria e tipo veg',
           'Selezione città / zone dove disponibili',
-          'Segnalazione locali mancanti dal comando dedicato',
+          'Segnalazione locali mancanti con il comando /segnala',
         ],
       },
     ],

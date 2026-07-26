@@ -16,6 +16,7 @@ interface CityContent {
   headline: string;
   lead: string;
   cta: string;
+  ctaAriaLabel: string;
   ctaSecondary: string | null;
   image: { src: string; alt: string };
   body: readonly string[];
@@ -28,6 +29,10 @@ interface Props {
 }
 
 const { city, site } = Astro.props;
+
+function withSegnala(text: string) {
+  return text.split('/segnala');
+}
 ---
 
 <header class="page-hero">
@@ -39,7 +44,11 @@ const { city, site } = Astro.props;
       {
         city.ctaSecondary ? (
           <div class="hero__actions">
-            <a class="btn btn--primary" href={site.telegramBot}>
+            <a
+              class="btn btn--primary"
+              href={site.telegramBot}
+              aria-label={city.ctaAriaLabel}
+            >
               {city.cta}
             </a>
             <a class="btn btn--outline" href={site.telegramBot}>
@@ -47,7 +56,11 @@ const { city, site } = Astro.props;
             </a>
           </div>
         ) : (
-          <a class="btn btn--primary" href={site.telegramBot}>
+          <a
+            class="btn btn--primary"
+            href={site.telegramBot}
+            aria-label={city.ctaAriaLabel}
+          >
             {city.cta}
           </a>
         )
@@ -68,7 +81,14 @@ const { city, site } = Astro.props;
   city.body.length > 0 ? (
     <div class="prose">
       {city.body.map((paragraph) => (
-        <p>{paragraph}</p>
+        <p>
+          {withSegnala(paragraph).map((part, i, arr) => (
+            <>
+              {part}
+              {i < arr.length - 1 ? <code>/segnala</code> : null}
+            </>
+          ))}
+        </p>
       ))}
     </div>
   ) : null
@@ -89,7 +109,11 @@ const { city, site } = Astro.props;
               ))}
             </ul>
             <div class="cta-band">
-              <a class="btn btn--primary" href={site.telegramBot}>
+              <a
+                class="btn btn--primary"
+                href={site.telegramBot}
+                aria-label={city.ctaAriaLabel}
+              >
                 {city.cta}
               </a>
             </div>
@@ -105,11 +129,22 @@ const { city, site } = Astro.props;
             <h2 id={`${section.title}-title`}>{section.title}</h2>
             <ul class="limits">
               {section.items.map((item) => (
-                <li>{item}</li>
+                <li>
+                  {withSegnala(item).map((part, i, arr) => (
+                    <>
+                      {part}
+                      {i < arr.length - 1 ? <code>/segnala</code> : null}
+                    </>
+                  ))}
+                </li>
               ))}
             </ul>
             <div class="cta-band">
-              <a class="btn btn--primary" href={site.telegramBot}>
+              <a
+                class="btn btn--primary"
+                href={site.telegramBot}
+                aria-label={city.ctaAriaLabel}
+              >
                 {city.cta}
               </a>
             </div>
@@ -120,16 +155,29 @@ const { city, site } = Astro.props;
 
     if (section.type === 'text') {
       const sectionCta = 'cta' in section ? section.cta : undefined;
+      const sectionCtaAria =
+        sectionCta && sectionCta === city.cta ? city.ctaAriaLabel : undefined;
       return (
         <section class="section section--tight" aria-labelledby={`${section.title}-title`}>
           <div class="section__inner">
             <h2 id={`${section.title}-title`}>{section.title}</h2>
             {section.paragraphs.map((paragraph) => (
-              <p class="section__lead">{paragraph}</p>
+              <p class="section__lead">
+                {withSegnala(paragraph).map((part, i, arr) => (
+                  <>
+                    {part}
+                    {i < arr.length - 1 ? <code>/segnala</code> : null}
+                  </>
+                ))}
+              </p>
             ))}
             {sectionCta ? (
               <div class="cta-band">
-                <a class="btn btn--primary" href={site.telegramBot}>
+                <a
+                  class="btn btn--primary"
+                  href={site.telegramBot}
+                  aria-label={sectionCtaAria}
+                >
                   {sectionCta}
                 </a>
               </div>

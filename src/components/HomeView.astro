@@ -11,6 +11,10 @@ const { copy, site } = Astro.props;
 const home = copy.home;
 const limitsIntro = 'limitsIntro' in home ? home.limitsIntro : undefined;
 const finalCta = 'finalCta' in home ? home.finalCta : undefined;
+
+function withSegnala(text: string) {
+  return text.split('/segnala');
+}
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -25,6 +29,7 @@ const finalCta = 'finalCta' in home ? home.finalCta : undefined;
         <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
         <a class="btn btn--ghost-dark" href="#come-funziona">{home.ctaSecondary}</a>
       </div>
+      <p class="hero__note">{home.ctaNote}</p>
     </div>
     <div class="hero__visual">
       <img
@@ -133,7 +138,16 @@ const finalCta = 'finalCta' in home ? home.finalCta : undefined;
   <div class="section__inner section__inner--split">
     <div>
       <h2 id="community-title">{home.communityTitle}</h2>
-      <p class="section__lead">{home.communityLead}</p>
+      <p class="section__lead">
+        {
+          withSegnala(home.communityLead).map((part, i, arr) => (
+            <>
+              {part}
+              {i < arr.length - 1 ? <code>/segnala</code> : null}
+            </>
+          ))
+        }
+      </p>
       <a class="btn btn--primary" href={site.telegramBot}>{home.communityCta}</a>
     </div>
     <img
