@@ -649,6 +649,14 @@ p:last-child {
   animation: rise-in var(--duration) var(--ease-out) 0.24s both;
 }
 
+.hero__note {
+  max-width: 40ch;
+  margin: var(--space-3) 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .hero__visual {
   display: flex;
   justify-content: center;

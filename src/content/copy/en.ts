@@ -22,6 +22,8 @@ export const en = {
       'A pocket guide on Telegram for finding vegan, vegetarian and vegan-friendly places.',
     availability:
       'Available in Bologna and its province. Florence is currently in beta.',
+    independentNote:
+      'TrovaVeg is an independent project that is growing with the support of its community.',
     footerCta: 'Open TrovaVeg on Telegram',
   },
   nav: [
@@ -37,15 +39,18 @@ export const en = {
     eyebrow: 'TrovaVeg on Telegram',
     headline: 'Find vegan, vegetarian and vegan-friendly places',
     guideMessage: 'Fewer endless lists, more useful answers.',
-    lead: 'TrovaVeg is a Telegram guide for finding places, dishes, categories, areas and towns when you are travelling, exploring somewhere new or simply deciding where to go.',
-    ctaPrimary: 'Open on Telegram',
+    lead: 'TrovaVeg is a Telegram bot for finding vegan, vegetarian and vegan-friendly places. This website explains how it works: searches happen directly in the bot.',
+    ctaPrimary: 'Open the bot on Telegram',
+    ctaNote:
+      'You need Telegram to use the bot. You do not need to download a TrovaVeg app or create an account on this website.',
     ctaSecondary: 'How it works',
     heroImage: {
       src: '/screenshot-hero.webp',
       alt: 'Telegram screen of TrovaVeg with the bot welcome message',
     },
     howTitle: 'How it works',
-    howLead: 'Ask TrovaVeg what you are looking for and get started directly in Telegram.',
+    howLead:
+      'You do not need a TrovaVeg app or an account on this website. To search for places, you need Telegram: open the bot and get started.',
     howSteps: [
       {
         title: 'Tell TrovaVeg what you need',
@@ -129,7 +134,7 @@ export const en = {
     ],
     communityTitle: 'Know a place worth adding?',
     communityLead:
-      'TrovaVeg grows with the community. You can suggest new places or report information that needs updating directly through the bot.',
+      'To suggest a new place or report information that needs updating, open TrovaVeg on Telegram and send the command /segnala.',
     communityCta: 'Open TrovaVeg on Telegram',
     communityImage: {
       src: '/screenshot-segnala.webp',
@@ -160,7 +165,8 @@ export const en = {
     status: 'Available',
     headline: 'Bologna, made easier.',
     lead: 'TrovaVeg is available in Bologna and its province. Search for vegan, vegetarian and vegan-friendly places by dish, category, area, town or preference.',
-    cta: 'Search Bologna on Telegram',
+    cta: 'Search Bologna',
+    ctaAriaLabel: 'Search Bologna in the Telegram bot',
     ctaSecondary: null as string | null,
     image: {
       src: '/screenshot-citta.webp',
@@ -210,7 +216,7 @@ export const en = {
         paragraphs: [
           'Information is curated and improved over time, but details can change. Check directly with the venue for opening hours, availability, allergens, coeliac disease and cross-contamination.',
         ],
-        cta: 'Search Bologna on Telegram',
+        cta: 'Search Bologna',
       },
     ],
   },
@@ -221,7 +227,8 @@ export const en = {
     status: 'Beta',
     headline: 'Florence, in beta.',
     lead: 'TrovaVeg is available in Florence in beta. You can already use it to search for vegan, vegetarian and vegan-friendly places while coverage continues to grow.',
-    cta: 'Search Florence on Telegram',
+    cta: 'Search Florence',
+    ctaAriaLabel: 'Search Florence in the Telegram bot',
     ctaSecondary: 'Help improve Florence',
     image: {
       src: '/screenshot-segnala.webp',
@@ -250,7 +257,7 @@ export const en = {
         type: 'text' as const,
         title: 'Help improve Florence',
         paragraphs: [
-          'Found a missing place or information that should be updated? Let TrovaVeg know through the bot. Community feedback helps improve the guide over time.',
+          'Found a missing place or information that needs updating? Open TrovaVeg on Telegram and send the command /segnala. Community feedback helps improve the guide over time.',
         ],
         cta: 'Open TrovaVeg on Telegram',
       },
@@ -260,7 +267,7 @@ export const en = {
         paragraphs: [
           'Florence is in beta. Information may be incomplete or change over time, and opening hours are not checked in real time. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
         ],
-        cta: 'Search Florence on Telegram',
+        cta: 'Search Florence',
       },
     ],
   },
