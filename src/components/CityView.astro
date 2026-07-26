@@ -30,8 +30,28 @@ interface Props {
 
 const { city, site } = Astro.props;
 
-function withSegnala(text: string) {
-  return text.split('/segnala');
+type InlineMark =
+  | { type: 'text'; value: string }
+  | { type: 'segnala' }
+  | { type: 'email' };
+
+function withInlineMarks(text: string): InlineMark[] {
+  const email = site.email;
+  return text.split(email).flatMap((emailPart, emailIndex, emailParts) => {
+    const marks = emailPart.split('/segnala').flatMap((part, i, arr) => {
+      if (i < arr.length - 1) {
+        return [
+          { type: 'text' as const, value: part },
+          { type: 'segnala' as const },
+        ];
+      }
+      return [{ type: 'text' as const, value: part }];
+    });
+    if (emailIndex < emailParts.length - 1) {
+      marks.push({ type: 'email' as const });
+    }
+    return marks;
+  });
 }
 ---
 
@@ -82,12 +102,15 @@ function withSegnala(text: string) {
     <div class="prose">
       {city.body.map((paragraph) => (
         <p>
-          {withSegnala(paragraph).map((part, i, arr) => (
-            <>
-              {part}
-              {i < arr.length - 1 ? <code>/segnala</code> : null}
-            </>
-          ))}
+          {withInlineMarks(paragraph).map((mark) =>
+            mark.type === 'segnala' ? (
+              <code>/segnala</code>
+            ) : mark.type === 'email' ? (
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            ) : (
+              mark.value
+            ),
+          )}
         </p>
       ))}
     </div>
@@ -130,12 +153,15 @@ function withSegnala(text: string) {
             <ul class="limits">
               {section.items.map((item) => (
                 <li>
-                  {withSegnala(item).map((part, i, arr) => (
-                    <>
-                      {part}
-                      {i < arr.length - 1 ? <code>/segnala</code> : null}
-                    </>
-                  ))}
+                  {withInlineMarks(item).map((mark) =>
+                    mark.type === 'segnala' ? (
+                      <code>/segnala</code>
+                    ) : mark.type === 'email' ? (
+                      <a href={`mailto:${site.email}`}>{site.email}</a>
+                    ) : (
+                      mark.value
+                    ),
+                  )}
                 </li>
               ))}
             </ul>
@@ -163,12 +189,15 @@ function withSegnala(text: string) {
             <h2 id={`${section.title}-title`}>{section.title}</h2>
             {section.paragraphs.map((paragraph) => (
               <p class="section__lead">
-                {withSegnala(paragraph).map((part, i, arr) => (
-                  <>
-                    {part}
-                    {i < arr.length - 1 ? <code>/segnala</code> : null}
-                  </>
-                ))}
+                {withInlineMarks(paragraph).map((mark) =>
+                  mark.type === 'segnala' ? (
+                    <code>/segnala</code>
+                  ) : mark.type === 'email' ? (
+                    <a href={`mailto:${site.email}`}>{site.email}</a>
+                  ) : (
+                    mark.value
+                  ),
+                )}
               </p>
             ))}
             {sectionCta ? (

@@ -134,7 +134,7 @@ export const en = {
     ],
     communityTitle: 'Know a place worth adding?',
     communityLead:
-      'To suggest a new place or report information that needs updating, open TrovaVeg on Telegram and send the command /segnala.',
+      'To suggest a new venue, open TrovaVeg on Telegram and send the /segnala command. To correct or update information about a venue already listed, email us at info@trovaveg.com.',
     communityCta: 'Open TrovaVeg on Telegram',
     communityImage: {
       src: '/screenshot-segnala.webp',
@@ -257,7 +257,7 @@ export const en = {
         type: 'text' as const,
         title: 'Help improve Florence',
         paragraphs: [
-          'Found a missing place or information that needs updating? Open TrovaVeg on Telegram and send the command /segnala. Community feedback helps improve the guide over time.',
+          'Found a missing venue? Open TrovaVeg on Telegram and send the /segnala command. To correct or update information about a venue already listed, email us at info@trovaveg.com.',
         ],
         cta: 'Open TrovaVeg on Telegram',
       },

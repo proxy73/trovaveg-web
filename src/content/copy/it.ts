@@ -122,7 +122,7 @@ export const it = {
     ],
     communityTitle: 'Community e segnalazioni',
     communityLead:
-      'Per suggerire un nuovo locale o segnalare informazioni da aggiornare, apri TrovaVeg su Telegram e invia il comando /segnala.',
+      'Per suggerire un nuovo locale, apri TrovaVeg su Telegram e invia il comando /segnala. Se invece vuoi correggere o aggiornare le informazioni di un locale già presente, scrivici a info@trovaveg.com.',
     communityCta: 'Segnala un locale sul bot',
     communityImage: {
       src: '/screenshot-segnala.webp',
@@ -186,7 +186,7 @@ export const it = {
     body: [
       'A Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato. La selezione è in costruzione, con lo stesso standard di cura.',
       'Non è ancora una copertura completa. È una beta onesta: meno liste infinite, più risposte utili — e spazio per migliorare con il tuo feedback.',
-      'Hai trovato un locale mancante o informazioni da aggiornare? Apri TrovaVeg su Telegram e invia il comando /segnala. Ogni contributo aiuta la guida.',
+      'Hai trovato un locale mancante? Apri TrovaVeg su Telegram e invia il comando /segnala. Per correggere o aggiornare le informazioni di un locale già presente, scrivici a info@trovaveg.com.',
     ],
     sections: [
       {

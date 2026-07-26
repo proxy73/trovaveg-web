@@ -12,8 +12,28 @@ const home = copy.home;
 const limitsIntro = 'limitsIntro' in home ? home.limitsIntro : undefined;
 const finalCta = 'finalCta' in home ? home.finalCta : undefined;
 
-function withSegnala(text: string) {
-  return text.split('/segnala');
+type InlineMark =
+  | { type: 'text'; value: string }
+  | { type: 'segnala' }
+  | { type: 'email' };
+
+function withInlineMarks(text: string): InlineMark[] {
+  const email = site.email;
+  return text.split(email).flatMap((emailPart, emailIndex, emailParts) => {
+    const marks = emailPart.split('/segnala').flatMap((part, i, arr) => {
+      if (i < arr.length - 1) {
+        return [
+          { type: 'text' as const, value: part },
+          { type: 'segnala' as const },
+        ];
+      }
+      return [{ type: 'text' as const, value: part }];
+    });
+    if (emailIndex < emailParts.length - 1) {
+      marks.push({ type: 'email' as const });
+    }
+    return marks;
+  });
 }
 ---
 
@@ -140,12 +160,15 @@ function withSegnala(text: string) {
       <h2 id="community-title">{home.communityTitle}</h2>
       <p class="section__lead">
         {
-          withSegnala(home.communityLead).map((part, i, arr) => (
-            <>
-              {part}
-              {i < arr.length - 1 ? <code>/segnala</code> : null}
-            </>
-          ))
+          withInlineMarks(home.communityLead).map((mark) =>
+            mark.type === 'segnala' ? (
+              <code>/segnala</code>
+            ) : mark.type === 'email' ? (
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            ) : (
+              mark.value
+            ),
+          )
         }
       </p>
       <a class="btn btn--primary" href={site.telegramBot}>{home.communityCta}</a>
