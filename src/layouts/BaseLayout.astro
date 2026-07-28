@@ -8,6 +8,7 @@ import {
   type Locale,
   site,
 } from '../content/copy';
+import { telegramBotHref, type WebTelegramSource } from '../content/site';
 import '../styles/global.css';
 
 interface Props {
@@ -44,6 +45,18 @@ const itAbs = absoluteUrl(switchItHref);
 const enAbs = absoluteUrl(switchEnHref);
 const ogLocale = copy.ogLocale;
 const ogLocaleAlt = locale === 'it' ? 'en_US' : 'it_IT';
+
+const footerTelegramSource: WebTelegramSource | undefined =
+  alternateKey === 'home'
+    ? locale === 'it'
+      ? 'web_home_it'
+      : 'web_home_en'
+    : alternateKey === 'bologna' || alternateKey === 'florence'
+      ? locale === 'it'
+        ? 'web_city_it'
+        : 'web_city_en'
+      : undefined;
+const footerTelegramHref = telegramBotHref(footerTelegramSource);
 ---
 
 <!doctype html>
@@ -196,7 +209,7 @@ const ogLocaleAlt = locale === 'it' ? 'en_US' : 'it_IT';
           }
         </div>
         <div class="site-footer__links">
-          <a href={site.telegramBot}>
+          <a href={footerTelegramHref}>
             {'footerCta' in copy.siteChrome && copy.siteChrome.footerCta
               ? copy.siteChrome.footerCta
               : copy.ui.footerBot}

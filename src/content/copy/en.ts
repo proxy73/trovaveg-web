@@ -168,6 +168,7 @@ export const en = {
     cta: 'Search Bologna',
     ctaAriaLabel: 'Search Bologna in the Telegram bot',
     ctaSecondary: null as string | null,
+    telegramSource: 'web_city_en' as const,
     image: {
       src: '/screenshot-citta.webp',
       alt: 'TrovaVeg screen with city and area options for Bologna',
@@ -230,6 +231,7 @@ export const en = {
     cta: 'Search Florence',
     ctaAriaLabel: 'Search Florence in the Telegram bot',
     ctaSecondary: 'Help improve Florence',
+    telegramSource: 'web_city_en' as const,
     image: {
       src: '/screenshot-segnala.webp',
       alt: 'TrovaVeg screen for suggesting a missing place in Florence',
@@ -296,7 +298,7 @@ export const en = {
       {
         type: 'text' as const,
         title: 'The Telegram bot',
-        text: 'TrovaVeg works through Telegram. Interactions with the bot take place within Telegram and are subject to Telegram’s own terms and privacy information. The website does not expose the bot’s backend, database or internal data sources.',
+        text: 'TrovaVeg works through Telegram. Interactions with the bot take place within Telegram and are subject to Telegram’s own terms and privacy information. The website does not expose the bot’s backend, database or internal data sources. Some website CTAs open the bot with a fixed, allowlisted technical parameter that only indicates page provenance (home or city, IT or EN). It does not include cookies, browser identifiers, URLs, referrers, or any correlation with Cloudflare Analytics.',
       },
       {
         type: 'text' as const,

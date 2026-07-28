@@ -147,6 +147,7 @@ export const it = {
     cta: 'Cerca Bologna',
     ctaAriaLabel: 'Cerca Bologna nel bot Telegram',
     ctaSecondary: null as string | null,
+    telegramSource: 'web_city_it' as const,
     image: {
       src: '/screenshot-citta.webp',
       alt: 'Schermata TrovaVeg con le opzioni di città e zone per Bologna',
@@ -179,6 +180,7 @@ export const it = {
     cta: 'Cerca Firenze',
     ctaAriaLabel: 'Cerca Firenze nel bot Telegram',
     ctaSecondary: 'Segnala un locale',
+    telegramSource: 'web_city_it' as const,
     image: {
       src: '/screenshot-segnala.webp',
       alt: 'Schermata TrovaVeg per segnalare un locale mancante a Firenze',
@@ -220,7 +222,7 @@ export const it = {
       {
         type: 'text' as const,
         title: 'Bot Telegram',
-        text: 'L’uso del bot avviene su Telegram, secondo i termini di Telegram. Per la ricerca usiamo ciò che scrivi in chat. Non chiediamo un account sul sito per usare TrovaVeg.',
+        text: 'L’uso del bot avviene su Telegram, secondo i termini di Telegram. Per la ricerca usiamo ciò che scrivi in chat. Non chiediamo un account sul sito per usare TrovaVeg. Alcune CTA del sito aprono il bot con un parametro tecnico fisso e allowlisted che indica solo la provenienza della pagina (home o città, IT o EN): non include cookie, identificatori del browser, URL, referrer né correlazione con Cloudflare Analytics.',
       },
       {
         type: 'text' as const,

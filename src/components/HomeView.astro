@@ -1,6 +1,6 @@
 ---
 import type { AppCopy } from '../content/copy';
-import type { Site } from '../content/site';
+import { telegramBotHref, type Site } from '../content/site';
 
 interface Props {
   copy: AppCopy;
@@ -11,6 +11,9 @@ const { copy, site } = Astro.props;
 const home = copy.home;
 const limitsIntro = 'limitsIntro' in home ? home.limitsIntro : undefined;
 const finalCta = 'finalCta' in home ? home.finalCta : undefined;
+const telegramHref = telegramBotHref(
+  copy.locale === 'it' ? 'web_home_it' : 'web_home_en',
+);
 
 type InlineMark =
   | { type: 'text'; value: string }
@@ -46,7 +49,7 @@ function withInlineMarks(text: string): InlineMark[] {
       <p class="hero__guide">{home.guideMessage}</p>
       <p class="hero__lead">{home.lead}</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+        <a class="btn btn--primary" href={telegramHref}>{home.ctaPrimary}</a>
         <a class="btn btn--ghost-dark" href="#come-funziona">{home.ctaSecondary}</a>
       </div>
       <p class="hero__note">{home.ctaNote}</p>
@@ -149,7 +152,7 @@ function withInlineMarks(text: string): InlineMark[] {
       }
     </div>
     <div class="cta-band">
-      <a class="btn btn--primary" href={site.telegramBot}>{home.ctaPrimary}</a>
+      <a class="btn btn--primary" href={telegramHref}>{home.ctaPrimary}</a>
     </div>
   </div>
 </section>
@@ -171,7 +174,7 @@ function withInlineMarks(text: string): InlineMark[] {
           )
         }
       </p>
-      <a class="btn btn--primary" href={site.telegramBot}>{home.communityCta}</a>
+      <a class="btn btn--primary" href={telegramHref}>{home.communityCta}</a>
     </div>
     <img
       class="phone-shot"
@@ -202,7 +205,7 @@ function withInlineMarks(text: string): InlineMark[] {
         <h2 id="final-cta-title">{finalCta.title}</h2>
         <p class="section__lead">{finalCta.text}</p>
         <div class="cta-band">
-          <a class="btn btn--primary" href={site.telegramBot}>
+          <a class="btn btn--primary" href={telegramHref}>
             {finalCta.cta}
           </a>
         </div>

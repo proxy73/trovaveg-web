@@ -1,5 +1,5 @@
 ---
-import type { Site } from '../content/site';
+import { telegramBotHref, type Site, type WebTelegramSource } from '../content/site';
 
 type CitySection =
   | { type: 'examples'; title: string; items: readonly string[] }
@@ -18,6 +18,7 @@ interface CityContent {
   cta: string;
   ctaAriaLabel: string;
   ctaSecondary: string | null;
+  telegramSource: WebTelegramSource;
   image: { src: string; alt: string };
   body: readonly string[];
   sections: readonly CitySection[];
@@ -29,6 +30,7 @@ interface Props {
 }
 
 const { city, site } = Astro.props;
+const telegramHref = telegramBotHref(city.telegramSource);
 
 type InlineMark =
   | { type: 'text'; value: string }
@@ -66,19 +68,19 @@ function withInlineMarks(text: string): InlineMark[] {
           <div class="hero__actions">
             <a
               class="btn btn--primary"
-              href={site.telegramBot}
+              href={telegramHref}
               aria-label={city.ctaAriaLabel}
             >
               {city.cta}
             </a>
-            <a class="btn btn--outline" href={site.telegramBot}>
+            <a class="btn btn--outline" href={telegramHref}>
               {city.ctaSecondary}
             </a>
           </div>
         ) : (
           <a
             class="btn btn--primary"
-            href={site.telegramBot}
+            href={telegramHref}
             aria-label={city.ctaAriaLabel}
           >
             {city.cta}
@@ -134,7 +136,7 @@ function withInlineMarks(text: string): InlineMark[] {
             <div class="cta-band">
               <a
                 class="btn btn--primary"
-                href={site.telegramBot}
+                href={telegramHref}
                 aria-label={city.ctaAriaLabel}
               >
                 {city.cta}
@@ -168,7 +170,7 @@ function withInlineMarks(text: string): InlineMark[] {
             <div class="cta-band">
               <a
                 class="btn btn--primary"
-                href={site.telegramBot}
+                href={telegramHref}
                 aria-label={city.ctaAriaLabel}
               >
                 {city.cta}
@@ -204,7 +206,7 @@ function withInlineMarks(text: string): InlineMark[] {
               <div class="cta-band">
                 <a
                   class="btn btn--primary"
-                  href={site.telegramBot}
+                  href={telegramHref}
                   aria-label={sectionCtaAria}
                 >
                   {sectionCta}
