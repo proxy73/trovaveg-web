@@ -2,20 +2,21 @@
 
 **Materiale interno e versionato.** Non è una pagina pubblica del sito. Non va pubblicato su trovaveg.com, né copiato in `public/` o `src/pages/`. Astro non lo include nella build: non genera route `/press` e non finisce in `dist/`.
 
-## Stato M33 (pre-freeze)
+## Stato M33 — CHIUSA / PASS / FROZEN
 
 | Voce | Stato |
 |------|--------|
+| M33 | **CHIUSA / PASS / FROZEN** |
 | Attribution backend, CTA sito e funnel end-to-end | PASS live |
 | Privacy logging | PASS live |
-| M33-A2 competitive positioning | Chiusa / PASS (con limiti di evidenza pubblica) |
+| M33-A2 competitive positioning | PASS (con limiti di evidenza pubblica) |
 | Press package | Privato / versionato; **non** pubblico sul sito |
 | M33-J dry run | PASS (3 partecipanti, 3 scenari) |
 | P0 / P1 aperti confermati | Nessuno |
-| **M33-Z freeze finale** | **Ancora pendente** — non dichiarare M33 chiusa o frozen |
-| M34 | Finestra prevista **settembre** |
+| Outreach in M33 | **Nessuno** (nessun invio o contatto) |
+| M34 | **Mercoledì 2 settembre 2026, ore 17:30 CEST** |
 
-**Nessun outreach in M33.** Asset e testi di questo package sono usabili verso l’esterno **solo dopo** il freeze M33-Z e con **decisione umana** per ogni singolo invio in M34. Nessun confronto nominativo con concorrenti.
+**Outreach esclusivamente in M34**, con **decisione umana** per ogni singolo contatto. Nessun confronto nominativo con concorrenti. Kill switch comunicazione: vedi [outreach-runbook.md](./outreach-runbook.md).
 
 ## Indice
 
@@ -35,11 +36,11 @@ Vedi [assets/README.md](./assets/README.md). Logo, icone e screenshot approvati 
 
 ## Regole operative
 
-1. **Outreach:** solo in **M34** (settembre), con decisione e invio **umani**. Nessun contatto in M33.
-2. **Gate:** il primo invio richiede il **freeze M33-Z** completato.
+1. **Outreach:** solo in **M34** (2 settembre 2026, 17:30 CEST), con decisione e invio **umani**. Nessun contatto avvenuto in M33.
+2. **Gate:** M33-Z freeze **completato** (CHIUSA / PASS / FROZEN); ogni invio richiede comunque approvazione umana.
 3. **Claim:** usare esclusivamente factsheet e FAQ. No numeri utenti non verificati, primati, copertura nazionale, certificazioni, Milano disponibile, confronti nominativi con concorrenti.
 4. **Privacy:** non inserire dati personali non pubblici, contatti privati, log, token o dati utenti.
-5. **Pubblicazione web:** nessuna pagina pubblica `/press` in questo milestone.
+5. **Pubblicazione web:** nessuna pagina pubblica `/press`; package resta interno.
 
 ## Contatti pubblici (già sul sito)
 

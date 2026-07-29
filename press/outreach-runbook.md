@@ -6,9 +6,9 @@ Procedura **interna**. Nessun invio automatico o massivo. **Nessun outreach in M
 
 | Fase | Azione |
 |------|--------|
-| **M33** | Package press privato/versionato. Attribution/CTA/funnel e privacy logging PASS live. Dry run M33-J PASS. **Nessun contatto** a media, community, locali o concorrenti. |
-| **M33-Z** | Freeze finale **ancora pendente**. Non dichiarare M33 chiusa o frozen finché M33-Z non è PASS. |
-| **M34** | Finestra prevista **settembre**. Outreach solo dopo decisione umana e gate sotto. |
+| **M33** | **CHIUSA / PASS / FROZEN**. Package press privato/versionato. Attribution/CTA/funnel e privacy logging PASS live. Dry run M33-J PASS. **Nessun contatto** a media, community, locali o concorrenti — **nessun outreach svolto**. |
+| **M33-Z** | Freeze finale **PASS** — M33 chiusa/frozen. |
+| **M34** | **Mercoledì 2 settembre 2026, ore 17:30 CEST**. Outreach solo dopo decisione umana e gate sotto. |
 
 **Focus lancio:** Bologna e provincia (disponibili). **Firenze:** sempre indicata come **beta**. **Milano:** non disponibile, fuori scope, **non annunciabile**.
 
@@ -16,7 +16,7 @@ Procedura **interna**. Nessun invio automatico o massivo. **Nessun outreach in M
 
 Tutti obbligatori:
 
-1. **M33-Z freeze finale** completato (PASS).
+1. **M33-Z freeze finale** completato (**PASS** — M33 FROZEN).
 2. Attribution / funnel end-to-end ancora in stato PASS.
 3. Nessun P0 / P1 confermato aperto.
 4. Retention `acquisition_events` entro soglia (vedi sotto); nessuna retention automatizzata attiva.
@@ -27,6 +27,7 @@ Se un gate fallisce: **no-go** — nessun invio.
 
 ## Reperibilità e monitoraggio (primi giorni M34)
 
+- **Finestra M34:** mercoledì **2 settembre 2026**, ore **17:30 CEST**.
 - **Nico** reperibile **17:30–22:00** nei **primi 3 giorni** della finestra di lancio.
 - Monitoraggio intensivo della comunicazione e delle risposte:
   - prime **2 ore**;
@@ -103,9 +104,9 @@ In caso di kill switch: non pubblicare correzioni affrettate senza approvazione;
 
 ## Vietato
 
-- Invii in M33 o prima del freeze M33-Z
+- Invii in M33 (nessun outreach avvenuto; M33 è FROZEN)
 - Invii massivi o automatici
-- Dichiarare M33 frozen/chiusa finché M33-Z non è PASS
+- Dichiarare outreach già avviato senza approvazione umana M34
 - Contatto a concorrenti con fini denigratori o confronti nominativi
 - Annunciare Milano, copertura nazionale o Firenze senza beta
 - Promettere retention automatizzata, metriche 24h di prodotto o pagina `/press` pubblica
