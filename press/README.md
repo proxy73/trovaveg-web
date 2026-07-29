@@ -1,8 +1,21 @@
 # Press package TrovaVeg (interno)
 
-**Materiale interno e versionato.** Non è una pagina pubblica del sito. Non va pubblicato automaticamente su trovaveg.com, né copiato in `public/` o `src/pages/`.
+**Materiale interno e versionato.** Non è una pagina pubblica del sito. Non va pubblicato su trovaveg.com, né copiato in `public/` o `src/pages/`. Astro non lo include nella build: non genera route `/press` e non finisce in `dist/`.
 
-Questa cartella vive nella root del repository sito (`press/`). Astro non la include nella build statica: non genera route `/press` e non finisce in `dist/`.
+## Stato M33 (pre-freeze)
+
+| Voce | Stato |
+|------|--------|
+| Attribution backend, CTA sito e funnel end-to-end | PASS live |
+| Privacy logging | PASS live |
+| M33-A2 competitive positioning | Chiusa / PASS (con limiti di evidenza pubblica) |
+| Press package | Privato / versionato; **non** pubblico sul sito |
+| M33-J dry run | PASS (3 partecipanti, 3 scenari) |
+| P0 / P1 aperti confermati | Nessuno |
+| **M33-Z freeze finale** | **Ancora pendente** — non dichiarare M33 chiusa o frozen |
+| M34 | Finestra prevista **settembre** |
+
+**Nessun outreach in M33.** Asset e testi di questo package sono usabili verso l’esterno **solo dopo** il freeze M33-Z e con **decisione umana** per ogni singolo invio in M34. Nessun confronto nominativo con concorrenti.
 
 ## Indice
 
@@ -18,14 +31,15 @@ Questa cartella vive nella root del repository sito (`press/`). Astro non la inc
 
 ## Stato asset
 
-Vedi [assets/README.md](./assets/README.md). Logo e screenshot sono previsti come disponibili; la foto del fondatore è facoltativa e **non disponibile**. In questa cartella non sono stati copiati file binari: gli asset vanno aggiunti localmente secondo le convenzioni di naming, senza inventarli.
+Vedi [assets/README.md](./assets/README.md). Logo, icone e screenshot approvati sono inclusi in `press/assets/`. La foto del fondatore è facoltativa e **non disponibile**.
 
 ## Regole operative
 
-1. **Outreach:** solo in milestone **M34**, con decisione e invio **umani**. Nessun contatto da questo package in M33.
-2. **Claim:** usare esclusivamente fatti e formulazioni di factsheet e FAQ. Non aggiungere numeri utenti, primati, copertura nazionale, certificazioni o confronti nominativi con concorrenti.
-3. **Privacy:** non inserire dati personali non pubblici, contatti privati, log, token o dati utenti.
-4. **Pubblicazione web:** una eventuale pagina pubblica `/press` richiederebbe una milestone dedicata e non è approvata qui.
+1. **Outreach:** solo in **M34** (settembre), con decisione e invio **umani**. Nessun contatto in M33.
+2. **Gate:** il primo invio richiede il **freeze M33-Z** completato.
+3. **Claim:** usare esclusivamente factsheet e FAQ. No numeri utenti non verificati, primati, copertura nazionale, certificazioni, Milano disponibile, confronti nominativi con concorrenti.
+4. **Privacy:** non inserire dati personali non pubblici, contatti privati, log, token o dati utenti.
+5. **Pubblicazione web:** nessuna pagina pubblica `/press` in questo milestone.
 
 ## Contatti pubblici (già sul sito)
 
