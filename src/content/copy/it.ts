@@ -30,7 +30,7 @@ export const it = {
     { href: '/privacy/', label: 'Privacy' },
   ],
   home: {
-    metaTitle: 'TrovaVeg',
+    metaTitle: 'TrovaVeg — Locali vegan, vegetariani e vegan-friendly',
     metaDescription:
       'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze. Meno liste infinite, più risposte utili.',
     eyebrow: 'TrovaVeg',
