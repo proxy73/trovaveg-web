@@ -241,6 +241,19 @@ export const it = {
         ],
       },
       {
+        question: 'TrovaVeg è gratuito?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Sì. TrovaVeg è attualmente gratuito.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Per usarlo ti serve soltanto Telegram: non devi creare un account sul sito e non esiste un’app TrovaVeg separata da installare.',
+          },
+        ],
+      },
+      {
         question: 'Come si usa TrovaVeg?',
         answer: [
           {
@@ -362,16 +375,20 @@ export const it = {
         ],
       },
       {
-        question: 'Cos’è /segnala?',
+        question: 'Come posso suggerire un nuovo locale?',
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'È un comando per proporre un locale mancante. Apri TrovaVeg su Telegram e invia:',
+            text: 'Apri TrovaVeg in una chat privata su Telegram e invia:',
           },
           { type: 'command' as const, value: '/segnala' },
           {
             type: 'paragraph' as const,
-            text: 'Il flusso è privato e moderato: le proposte non vengono pubblicate automaticamente. C’è un controllo umano prima di ogni eventuale aggiunta.',
+            text: 'Dopo la tua conferma, il nome del locale e la città o il comune vengono inviati al nostro spazio di moderazione. I tuoi dati Telegram non vengono pubblicati.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'La segnalazione viene controllata da una persona e non aggiunge automaticamente il locale al catalogo.',
           },
         ],
       },
@@ -389,7 +406,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg propone una selezione curata di locali vegan, vegetariani e vegan-friendly, grazie a un’accurata ricerca online tramite i siti internet ufficiali dei locali e a esperienze dirette in loco.',
+            text: 'Le informazioni vengono raccolte e curate manualmente, dando priorità ai siti ufficiali, ai menu e ai canali dei locali. Quando disponibile, l’esperienza diretta può integrare la ricerca online.',
           },
           {
             type: 'paragraph' as const,
