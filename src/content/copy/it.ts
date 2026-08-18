@@ -27,6 +27,7 @@ export const it = {
     { href: '/', label: 'Home' },
     { href: '/bologna/', label: 'Bologna' },
     { href: '/firenze/', label: 'Firenze' },
+    { href: '/faq/', label: 'FAQ' },
     { href: '/privacy/', label: 'Privacy' },
   ],
   home: {
@@ -136,6 +137,15 @@ export const it = {
       'Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
       'Il sito non ha account, database utente né CMS: l’esperienza viva è sul bot Telegram.',
     ],
+    faqTeaser: {
+      title: 'Hai qualche dubbio?',
+      paragraphs: [
+        'TrovaVeg è semplice da usare, ma non è un chatbot generalista. Scrivi cosa vuoi mangiare, una categoria, una zona o il tipo di offerta veg che cerchi.',
+        'Nelle FAQ trovi esempi pratici, limiti attuali e risposte alle domande più comuni.',
+      ],
+      cta: 'Leggi le FAQ',
+      href: '/faq/',
+    },
   },
   bologna: {
     metaTitle: 'Bologna',
@@ -198,6 +208,251 @@ export const it = {
           'Ricerca per categoria e tipo veg',
           'Selezione città / zone dove disponibili',
           'Segnalazione locali mancanti con il comando /segnala',
+        ],
+      },
+    ],
+  },
+  faq: {
+    metaTitle: 'FAQ — Domande frequenti su TrovaVeg',
+    metaDescription:
+      'Come usare TrovaVeg su Telegram, dove è disponibile, limiti, segnalazioni e privacy. La ricerca avviene nel bot, non sul sito.',
+    headline: 'Domande frequenti',
+    lead: 'TrovaVeg è un bot Telegram per trovare locali vegan, vegetariani e vegan-friendly. Qui trovi come usarlo, dove è disponibile e quali sono i limiti.',
+    ctaPrimary: 'Apri il bot su Telegram',
+    ctaSecondary: 'Privacy e trasparenza',
+    privacyHref: '/privacy/',
+    finalCta: {
+      title: 'Pronto a cercare un locale?',
+      text: 'Apri TrovaVeg su Telegram. Per usare il bot serve Telegram: non devi scaricare un’app TrovaVeg né creare un account sul sito.',
+      cta: 'Apri il bot su Telegram',
+    },
+    items: [
+      {
+        question: 'Cos’è TrovaVeg?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'TrovaVeg è un bot Telegram indipendente che aiuta a trovare locali vegan, vegetariani e vegan-friendly. Il sito spiega il progetto; la ricerca avviene nel bot.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Non è una mappa web nazionale e non è un catalogo infinito. Puntiamo a una selezione essenziale e a risposte utili.',
+          },
+        ],
+      },
+      {
+        question: 'Come si usa TrovaVeg?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Apri @TrovaVegBot in chat privata su Telegram. Scrivi cosa vuoi mangiare, una categoria, una zona o il tipo di offerta veg che cerchi, oppure usa i pulsanti guidati.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Ricevi una selezione essenziale di locali, non migliaia di link dubbi. Ecco alcuni esempi di ricerche verificate nel bot:',
+          },
+          {
+            type: 'example' as const,
+            items: [
+              'colazione in centro a Bologna',
+              'ristorante vegan-friendly a Bologna',
+              'ristorante con opzioni vegane a Bologna',
+              'solo locali 100% vegani a Firenze',
+              'agriturismo in provincia di Bologna',
+              'gelateria a Funo',
+            ],
+          },
+        ],
+      },
+      {
+        question: 'Serve un’app TrovaVeg o un account sul sito?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'No. Per usare il bot serve Telegram. Non devi scaricare un’app TrovaVeg né creare un account sul sito.',
+          },
+        ],
+      },
+      {
+        question: 'Dove è disponibile TrovaVeg oggi?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Oggi TrovaVeg è disponibile a Bologna e provincia, e a Firenze in beta. Altre città arriveranno nel tempo.',
+          },
+        ],
+      },
+      {
+        question: 'Bologna è disponibile?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Sì. A Bologna, città e provincia, TrovaVeg è in soft launch: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
+          },
+        ],
+      },
+      {
+        question: 'Firenze è disponibile?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Sì, in beta. Puoi già usarlo con le stesse funzioni di Bologna, ma copertura e completezza possono essere inferiori.',
+          },
+        ],
+      },
+      {
+        question: 'Milano è disponibile?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'No. Milano non è disponibile ed è fuori scope.',
+          },
+        ],
+      },
+      {
+        question: 'Cosa posso cercare?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Ricerca libera e guidata: categorie, piatti, zona e preferenze, con i dettagli dei locali dove disponibili.',
+          },
+          {
+            type: 'list' as const,
+            items: [
+              'Categorie, come ristorante, bar, panificio o gelateria',
+              'Città, zone e comuni dove disponibili',
+              'Tipo veg: vegano, vegetariano o vegan-friendly',
+            ],
+          },
+        ],
+      },
+      {
+        question: 'C’è la geolocalizzazione?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Sì. Tocca il pulsante 📍 Vicino a me e condividi la posizione tramite Telegram.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'La posizione viene usata temporaneamente nella sessione, per un massimo di 30 minuti, per cercare e ordinare i risultati in base alla distanza. Non viene aggiunta al catalogo dei locali.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Per usare questa funzione, condividi la posizione dal pulsante: scrivere soltanto “vicino a me” non avvia la ricerca GPS.',
+          },
+        ],
+      },
+      {
+        question: 'TrovaVeg è un chatbot generalista?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'No. È una guida tascabile per locali veg. Funziona meglio se scrivi cosa vuoi mangiare, una categoria, una zona o il tipo di offerta veg che cerchi.',
+          },
+        ],
+      },
+      {
+        question: 'Perché TrovaVeg è su Telegram?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Per offrire uno strumento rapido e accessibile nella chat che molte persone usano già, senza scaricare un’app TrovaVeg né creare un account sul sito.',
+          },
+        ],
+      },
+      {
+        question: 'Cos’è /segnala?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'È un comando per proporre un locale mancante. Apri TrovaVeg su Telegram e invia:',
+          },
+          { type: 'command' as const, value: '/segnala' },
+          {
+            type: 'paragraph' as const,
+            text: 'Il flusso è privato e moderato: le proposte non vengono pubblicate automaticamente. C’è un controllo umano prima di ogni eventuale aggiunta.',
+          },
+        ],
+      },
+      {
+        question: 'Come correggo le informazioni di un locale già in guida?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Al momento /segnala serve per proporre un nuovo locale e richiede il nome del locale e la città o il comune.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Se noti un’informazione non aggiornata in una scheda, una segnalazione non viene trattata come aggiornamento automatico: le informazioni vengono verificate prima di eventuali modifiche.',
+          },
+        ],
+      },
+      {
+        question: 'Come vengono scelti i locali?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'TrovaVeg propone una selezione curata di locali vegan, vegetariani e vegan-friendly. Le schede riportano ciò che è disponibile in guida: per confermare menu, orari o disponibilità, verifica con il locale.',
+          },
+        ],
+      },
+      {
+        question: 'Le informazioni sono sempre aggiornate?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Le informazioni vengono curate e aggiornate progressivamente. Alcuni dettagli possono cambiare o risultare incompleti, quindi ti consigliamo di verificare direttamente con il locale le informazioni più importanti prima di raggiungerlo.',
+          },
+        ],
+      },
+      {
+        question: 'Posso prenotare con TrovaVeg?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'No. TrovaVeg non fa prenotazioni automatiche. Quando serve confermare qualcosa, contatta il locale direttamente.',
+          },
+        ],
+      },
+      {
+        question: 'È una mappa o una guida nazionale?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'No. Non è una mappa web nazionale e non dichiara copertura nazionale. Oggi è disponibile a Bologna e provincia, e a Firenze in beta.',
+          },
+        ],
+      },
+      {
+        question: 'Come mi comporto per allergie, celiachia e contaminazioni?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
+          },
+        ],
+      },
+      {
+        question: 'Come gestite la privacy?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'trovaveg.com è un sito statico: niente database, CMS né account utente. Usiamo Cloudflare Web Analytics in forma aggregata, senza cookie pubblicitari, pixel di profilazione o strumenti di remarketing.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'L’uso del bot avviene su Telegram, secondo i termini di Telegram. I dettagli sono nella pagina Privacy e trasparenza.',
+          },
+        ],
+      },
+      {
+        question: 'Come vi contatto?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Per cercare un locale, apri il bot su Telegram. Per proporre un nuovo locale usa il comando /segnala nel bot.',
+          },
         ],
       },
     ],

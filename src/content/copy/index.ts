@@ -24,6 +24,7 @@ export const alternates: Record<string, { it: string; en: string }> = {
   bologna: { it: '/bologna/', en: '/en/bologna/' },
   florence: { it: '/firenze/', en: '/en/florence/' },
   privacy: { it: '/privacy/', en: '/en/privacy/' },
+  faq: { it: '/faq/', en: '/en/faq/' },
   notFound: { it: '/404', en: '/en/404/' },
 };
 

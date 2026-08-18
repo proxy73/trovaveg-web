@@ -1,0 +1,18 @@
+---
+import FaqView from '../../components/FaqView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, site } from '../../content/copy';
+
+const copy = getCopy('en');
+---
+
+<BaseLayout
+  locale="en"
+  copy={copy}
+  title={copy.faq.metaTitle}
+  description={copy.faq.metaDescription}
+  canonicalPath="/en/faq/"
+  alternateKey="faq"
+>
+  <FaqView copy={copy} site={site} />
+</BaseLayout>

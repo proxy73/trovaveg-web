@@ -1,0 +1,136 @@
+---
+import type { AppCopy } from '../content/copy';
+import type { Site } from '../content/site';
+
+interface Props {
+  copy: AppCopy;
+  site: Site;
+}
+
+const { copy, site } = Astro.props;
+const faq = copy.faq;
+// FAQ CTAs stay on the plain bot URL: web_faq_* is not in the live bot
+// allowlist (M33-C.1) and this milestone cannot change the bot.
+const telegramHref = site.telegramBot;
+
+type InlineMark =
+  | { type: 'text'; value: string }
+  | { type: 'segnala' }
+  | { type: 'email' };
+
+function withInlineMarks(text: string): InlineMark[] {
+  const email = site.email;
+  return text.split(email).flatMap((emailPart, emailIndex, emailParts) => {
+    const marks = emailPart.split('/segnala').flatMap((part, i, arr) => {
+      if (i < arr.length - 1) {
+        return [
+          { type: 'text' as const, value: part },
+          { type: 'segnala' as const },
+        ];
+      }
+      return [{ type: 'text' as const, value: part }];
+    });
+    if (emailIndex < emailParts.length - 1) {
+      marks.push({ type: 'email' as const });
+    }
+    return marks;
+  });
+}
+---
+
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <h1>{faq.headline}</h1>
+    <p class="page-hero__lead">{faq.lead}</p>
+    <div class="faq-actions">
+      <a class="btn btn--primary" href={telegramHref}>{faq.ctaPrimary}</a>
+      <a class="btn btn--ghost-dark" href={faq.privacyHref}>{faq.ctaSecondary}</a>
+    </div>
+  </div>
+</header>
+
+<div class="faq-wrap">
+  <div class="faq-list">
+    {
+      faq.items.map((item) => (
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">{item.question}</span>
+          </summary>
+          <div class="faq-item__body">
+            {item.answer.map((block) => {
+              if (block.type === 'paragraph') {
+                return (
+                  <p>
+                    {withInlineMarks(block.text).map((mark) =>
+                      mark.type === 'segnala' ? (
+                        <code>/segnala</code>
+                      ) : mark.type === 'email' ? (
+                        <a href={`mailto:${site.email}`}>{site.email}</a>
+                      ) : (
+                        mark.value
+                      ),
+                    )}
+                  </p>
+                );
+              }
+
+              if (block.type === 'list') {
+                return (
+                  <ul>
+                    {block.items.map((entry) => (
+                      <li>
+                        {withInlineMarks(entry).map((mark) =>
+                          mark.type === 'segnala' ? (
+                            <code>/segnala</code>
+                          ) : mark.type === 'email' ? (
+                            <a href={`mailto:${site.email}`}>{site.email}</a>
+                          ) : (
+                            mark.value
+                          ),
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+
+              if (block.type === 'example') {
+                return (
+                  <ul class="chip-list">
+                    {block.items.map((example) => (
+                      <li>
+                        <span class="chip">{example}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+
+              if (block.type === 'command') {
+                return (
+                  <p class="faq-command">
+                    <code>{block.value}</code>
+                  </p>
+                );
+              }
+
+              return null;
+            })}
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</div>
+
+<section class="section section--alt" aria-labelledby="faq-final-cta-title">
+  <div class="section__inner">
+    <h2 id="faq-final-cta-title">{faq.finalCta.title}</h2>
+    <p class="section__lead">{faq.finalCta.text}</p>
+    <div class="faq-actions">
+      <a class="btn btn--primary" href={telegramHref}>{faq.finalCta.cta}</a>
+      <a class="btn btn--ghost-dark" href={faq.privacyHref}>{faq.ctaSecondary}</a>
+    </div>
+  </div>
+</section>
