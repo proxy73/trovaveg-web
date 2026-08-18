@@ -451,11 +451,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: '/segnala is currently designed to suggest a new venue and asks for the venue name and city or municipality.',
-          },
-          {
-            type: 'paragraph' as const,
-            text: 'If you notice outdated information in an existing listing, a report is not treated as an automatic update: information is reviewed before any change is made.',
+            text: 'If you notice out-of-date information in a listing, email info@trovaveg.com. A report is not treated as an automatic update: information is reviewed before any changes are made.',
           },
         ],
       },
@@ -464,7 +460,11 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg offers a curated selection of vegan, vegetarian and vegan-friendly places. Listings show what is available in the guide: to confirm menus, opening hours or availability, check with the venue.',
+            text: 'TrovaVeg offers a curated selection of vegan, vegetarian and vegan-friendly places through careful online research using official venue websites and direct on-site experience.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Listings show what is available in the guide: to confirm menus, opening hours or availability, check with the venue.',
           },
         ],
       },
@@ -482,7 +482,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. TrovaVeg does not make bookings. When you need to confirm something, contact the venue directly.',
+            text: 'No. TrovaVeg does not make automatic bookings. When you need to confirm something, contact the venue directly. You can use the phone number from the full venue details provided by the bot.',
           },
         ],
       },
@@ -522,7 +522,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'To search for a place, open the bot on Telegram. To suggest a new venue, send the /segnala command in the bot.',
+            text: 'For any information, email info@trovaveg.com.',
           },
         ],
       },
