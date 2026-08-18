@@ -380,11 +380,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Al momento /segnala serve per proporre un nuovo locale e richiede il nome del locale e la città o il comune.',
-          },
-          {
-            type: 'paragraph' as const,
-            text: 'Se noti un’informazione non aggiornata in una scheda, una segnalazione non viene trattata come aggiornamento automatico: le informazioni vengono verificate prima di eventuali modifiche.',
+            text: 'Se noti un’informazione non aggiornata in una scheda, scrivi a info@trovaveg.com. Una segnalazione non viene trattata come aggiornamento automatico: le informazioni vengono verificate prima di eventuali modifiche.',
           },
         ],
       },
@@ -393,7 +389,11 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg propone una selezione curata di locali vegan, vegetariani e vegan-friendly. Le schede riportano ciò che è disponibile in guida: per confermare menu, orari o disponibilità, verifica con il locale.',
+            text: 'TrovaVeg propone una selezione curata di locali vegan, vegetariani e vegan-friendly, grazie a un’accurata ricerca online tramite i siti internet ufficiali dei locali e a esperienze dirette in loco.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Le schede riportano ciò che è disponibile in guida: per confermare menu, orari o disponibilità, verifica con il locale.',
           },
         ],
       },
@@ -411,7 +411,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. TrovaVeg non fa prenotazioni automatiche. Quando serve confermare qualcosa, contatta il locale direttamente.',
+            text: 'No. TrovaVeg non fa prenotazioni automatiche. Quando serve confermare qualcosa, contatta il locale direttamente. Puoi usare il numero di telefono direttamente dalla scheda completa del locale che ti fornisce il bot.',
           },
         ],
       },
@@ -451,7 +451,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Per cercare un locale, apri il bot su Telegram. Per proporre un nuovo locale usa il comando /segnala nel bot.',
+            text: 'Per qualsiasi tipo di informazione, scrivi a info@trovaveg.com.',
           },
         ],
       },
