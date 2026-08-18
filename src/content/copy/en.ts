@@ -312,6 +312,19 @@ export const en = {
         ],
       },
       {
+        question: 'Is TrovaVeg free?',
+        answer: [
+          {
+            type: 'paragraph' as const,
+            text: 'Yes. TrovaVeg is currently free to use.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'You only need Telegram: you do not need to create an account on this website, and there is no separate TrovaVeg app to install.',
+          },
+        ],
+      },
+      {
         question: 'How do I use TrovaVeg?',
         answer: [
           {
@@ -433,16 +446,20 @@ export const en = {
         ],
       },
       {
-        question: 'What is /segnala?',
+        question: 'How can I suggest a new venue?',
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'It is a command to suggest a missing venue. Open TrovaVeg on Telegram and send:',
+            text: 'Open TrovaVeg in a private Telegram chat and send:',
           },
           { type: 'command' as const, value: '/segnala' },
           {
             type: 'paragraph' as const,
-            text: 'Suggestions are private and reviewed. Nothing is published automatically: there is a human check before any possible addition.',
+            text: 'After you confirm, the venue name and city or municipality are sent to our moderation space. Your Telegram identity is not published.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'A person reviews the suggestion, and the venue is not automatically added to the catalogue.',
           },
         ],
       },
@@ -460,7 +477,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg offers a curated selection of vegan, vegetarian and vegan-friendly places through careful online research using official venue websites and direct on-site experience.',
+            text: 'Information is manually researched and curated, prioritising official venue websites, menus and social channels. When available, direct experience may complement online research.',
           },
           {
             type: 'paragraph' as const,
