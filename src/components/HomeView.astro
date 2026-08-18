@@ -89,6 +89,22 @@ function withInlineMarks(text: string): InlineMark[] {
   </div>
 </section>
 
+{
+  'faqTeaser' in home && home.faqTeaser ? (
+    <section class="section faq-teaser" aria-labelledby="faq-teaser-title">
+      <div class="section__inner">
+        <h2 id="faq-teaser-title">{home.faqTeaser.title}</h2>
+        {home.faqTeaser.paragraphs.map((text) => (
+          <p>{text}</p>
+        ))}
+        <a class="btn btn--ghost-dark" href={home.faqTeaser.href}>
+          {home.faqTeaser.cta}
+        </a>
+      </div>
+    </section>
+  ) : null
+}
+
 <section class="section section--alt" aria-labelledby="search-title">
   <div class="section__inner">
     <h2 id="search-title">{home.searchTitle}</h2>
