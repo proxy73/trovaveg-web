@@ -93,7 +93,7 @@ export const it = {
         href: '/bologna/',
         name: 'Bologna',
         status: 'Disponibile',
-        text: 'Città e provincia: soft launch con selezione essenziale di locali veg.',
+        text: 'Bologna e provincia — disponibile. Selezione essenziale di locali veg.',
       },
       {
         href: '/firenze/',
@@ -150,10 +150,10 @@ export const it = {
   bologna: {
     metaTitle: 'Bologna',
     metaDescription:
-      'Soft launch attivo su città e provincia. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
+      'Disponibile a Bologna e provincia. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
     status: 'Attiva',
     headline: 'Bologna, in tasca.',
-    lead: 'Soft launch attivo su città e provincia. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
+    lead: 'Bologna e provincia sono disponibili. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
     cta: 'Cerca Bologna',
     ctaAriaLabel: 'Cerca Bologna nel bot Telegram',
     ctaSecondary: null as string | null,
@@ -300,7 +300,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Sì. A Bologna, città e provincia, TrovaVeg è in soft launch: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
+            text: 'Sì. Bologna e provincia sono disponibili: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
           },
         ],
       },
