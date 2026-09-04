@@ -21,8 +21,10 @@ Nico è il fondatore di TrovaVeg, un progetto indipendente nato per rendere più
 | Area | Stato |
 |------|--------|
 | Bologna e provincia | Disponibili |
-| Firenze | In beta |
+| Firenze e provincia | Disponibile |
 | Milano | Non disponibile — fuori scope |
+
+Formulazione pubblica allineata al sito: *TrovaVeg è disponibile nelle province di Bologna e Firenze.*
 
 ## Funzioni reali
 
@@ -35,10 +37,12 @@ Nico è il fondatore di TrovaVeg, un progetto indipendente nato per rendere più
 ## Limiti e trasparenza
 
 - Progetto indipendente in crescita
+- Selezione curata, non esaustiva: non è un catalogo completo né “tutti i locali”
 - Informazioni indicative e curate nel tempo, non in tempo reale
 - Orari e dettagli possono cambiare; per allergie, celiachia e contaminazioni va sempre verificato con il locale
-- Firenze è in beta: copertura e completezza possono essere inferiori a Bologna e provincia
+- Nessuna certificazione formale dei locali
 - Nessuna prenotazione automatica sul sito
+- Nessuna nuova città oltre alle province di Bologna e Firenze
 
 ## Contatti e riferimenti pubblici
 

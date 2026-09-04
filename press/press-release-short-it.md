@@ -11,3 +11,5 @@ TrovaVeg è un bot Telegram indipendente per trovare locali vegan, vegetariani e
 Il fondatore **Nico**: «Volevo uno strumento rapido, pronto all’uso e accessibile direttamente nella chat che molte persone utilizzano ogni giorno.»
 
 **Contatto:** info@trovaveg.com · https://trovaveg.com · https://t.me/TrovaVegBot
+
+*Nota storica: al lancio M34 Firenze era in beta; dallo stato M35-FIR-GA è disponibile.*

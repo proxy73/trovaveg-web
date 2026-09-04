@@ -12,7 +12,7 @@
 | 2 | Community vegan / vegetariane | Bologna e online | Pubblico già interessato a opzioni veg | Non contattato — M34 soltanto |
 | 3 | Associazioni / realtà locali | Bologna | Radicamento territoriale e segnalazioni di qualità | Non contattato — M34 soltanto |
 | 3 | Creator locali | Bologna | Diffusione organica del bot, tono sobrio | Non contattato — M34 soltanto |
-| 4 | Media Firenze | Firenze | Possibile interesse locale; **nota obbligatoria: Firenze è in beta** | Non contattato — M34 soltanto |
+| 4 | Media Firenze | Firenze | Possibile interesse locale; **nota: Firenze e provincia disponibili — nessun claim di completezza** | Non contattato — M34 soltanto |
 
 ## Note
 
