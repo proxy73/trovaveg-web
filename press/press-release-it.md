@@ -31,3 +31,5 @@ Bot: https://t.me/TrovaVegBot
 ---
 
 *Note per l’uso: non aggiungere numeri utenti non verificati, claim di completezza, certificazione, leadership o confronti nominativi con altri servizi. Milano non è disponibile.*
+
+*Nota storica: al lancio M34 Firenze era in beta; dallo stato M35-FIR-GA è disponibile.*

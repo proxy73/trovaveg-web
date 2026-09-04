@@ -10,7 +10,10 @@ Procedura **interna**. Nessun invio automatico o massivo. **Nessun outreach in M
 | **M33-Z** | Freeze finale **PASS** — M33 chiusa/frozen. |
 | **M34** | **Mercoledì 2 settembre 2026, ore 17:30 CEST**. Outreach solo dopo decisione umana e gate sotto. |
 
-**Focus lancio:** Bologna e provincia (disponibili). **Firenze:** sempre indicata come **beta**. **Milano:** non disponibile, fuori scope, **non annunciabile**.
+**Focus lancio M34 (storico):** Bologna e provincia; Firenze era indicata come beta.
+**Stato claim post-M35-FIR-GA:** TrovaVeg è disponibile nelle province di Bologna e Firenze.
+**Milano:** non disponibile, fuori scope, **non annunciabile**.
+**Limiti obbligatori in ogni pitch:** selezione non esaustiva, nessuna certificazione, informazioni non necessariamente in tempo reale, nessuna nuova città.
 
 ## Gate go / no-go (prima del primo invio)
 
@@ -67,9 +70,9 @@ Non inserire qui SQL eseguibile, token o dettagli tecnici sensibili.
 ## Prima di ogni contatto (obbligatorio)
 
 1. **Approvazione umana** scritta (chi approva, destinatario, canale, bozza).
-2. **Adattare il pitch** (Bologna/provincia vs tematico vs Firenze beta).
+2. **Adattare il pitch** (Bologna/provincia, Firenze/provincia o tematico), senza claim di completezza.
 3. **Verificare i claim** contro `factsheet-it.md` e `faq-it.md`. Nessun numero utenti non verificato, nessun primato, nessuna copertura nazionale, nessuna certificazione, nessun Milano disponibile, nessun confronto nominativo.
-4. Per Firenze: nota obbligatoria **«Firenze è in beta»**.
+4. Per Firenze: indicare **disponibile** (città e provincia) e i limiti (selezione non esaustiva, non real-time, nessuna certificazione). Non usare più «Firenze è in beta».
 5. Solo contatti pubblici o canali legittimi; non usare dati personali non pubblici da questo repo.
 
 ## Invio
@@ -88,7 +91,7 @@ Non inserire qui SQL eseguibile, token o dettagli tecnici sensibili.
 
 Sospendere subito outreach e bozze pubbliche se:
 
-- errore fattuale sui claim (città, beta, funzioni);
+- errore fattuale sui claim (città, disponibilità, limiti, funzioni);
 - richiesta di dati non verificabili o pressioni a gonfiare numeri;
 - incidente privacy (incluso retention oltre soglia) o leak di materiale non pubblico;
 - decisione del fondatore / maintainer.
@@ -100,7 +103,7 @@ In caso di kill switch: non pubblicare correzioni affrettate senza approvazione;
 | Classe | Esempio | Azione |
 |--------|---------|--------|
 | **P0** | Claim falso già inviato; leak dati; retention oltre 90 giorni non sanata; crisi reputazionale acuta | Stop immediato; correzione approvata; escalation umana |
-| **P1** | Ambiguo su Firenze beta / Milano; tono non allineato; routine retention in ritardo ma sotto soglia critica | Sospendere quel thread o l’invio; riallineare; riprendere solo dopo ok |
+| **P1** | Ambiguo su Firenze disponibile / Milano; claim di completezza; tono non allineato; routine retention in ritardo ma sotto soglia critica | Sospendere quel thread o l’invio; riallineare; riprendere solo dopo ok |
 
 ## Vietato
 
@@ -108,6 +111,7 @@ In caso di kill switch: non pubblicare correzioni affrettate senza approvazione;
 - Invii massivi o automatici
 - Dichiarare outreach già avviato senza approvazione umana M34
 - Contatto a concorrenti con fini denigratori o confronti nominativi
-- Annunciare Milano, copertura nazionale o Firenze senza beta
+- Annunciare Milano, copertura nazionale, catalogo completo o nuove città oltre Bologna/Firenze
+- Dichiarare Firenze ancora in beta (stato superato da M35-FIR-GA)
 - Promettere retention automatizzata, metriche 24h di prodotto o pagina `/press` pubblica
 - Modifica live del sito/bot “per la stampa” fuori processo
