@@ -21,7 +21,7 @@ export const en = {
     description:
       'A pocket guide on Telegram for finding vegan, vegetarian and vegan-friendly places.',
     availability:
-      'Available in Bologna and its province. Florence is currently in beta.',
+      'TrovaVeg is available in the provinces of Bologna and Florence.',
     independentNote:
       'TrovaVeg is an independent project that is growing with the support of its community.',
     footerCta: 'Open TrovaVeg on Telegram',
@@ -36,7 +36,7 @@ export const en = {
   home: {
     metaTitle: 'TrovaVeg | Find vegan, vegetarian and vegan-friendly places',
     metaDescription:
-      'Find vegan, vegetarian and vegan-friendly places in Bologna and its province with TrovaVeg on Telegram. Florence is currently in beta.',
+      'Find vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. TrovaVeg is available in the provinces of Bologna and Florence.',
     eyebrow: 'TrovaVeg on Telegram',
     headline: 'Find vegan, vegetarian and vegan-friendly places',
     guideMessage: 'Fewer endless lists, more useful answers.',
@@ -102,8 +102,8 @@ export const en = {
       {
         href: '/en/florence/',
         name: 'Florence',
-        status: 'Beta',
-        text: 'TrovaVeg is available in beta while coverage continues to grow.',
+        status: 'Available',
+        text: 'Available in Florence and the province of Florence.',
         cta: 'Explore Florence',
       },
     ],
@@ -151,7 +151,7 @@ export const en = {
       'TrovaVeg does not make bookings.',
       'Some information may be incomplete or change over time.',
       'For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
-      'Florence is currently in beta.',
+      'TrovaVeg is available in the provinces of Bologna and Florence; the selection is curated, not exhaustive.',
     ],
     finalCta: {
       title: 'Ready to find your next place?',
@@ -232,12 +232,12 @@ export const en = {
     ],
   },
   florence: {
-    metaTitle: 'Vegan, vegetarian and vegan-friendly places in Florence | TrovaVeg Beta',
+    metaTitle: 'Vegan, vegetarian and vegan-friendly places in Florence | TrovaVeg',
     metaDescription:
-      'Explore vegan, vegetarian and vegan-friendly places in Florence with TrovaVeg on Telegram. Florence is currently in beta.',
-    status: 'Beta',
-    headline: 'Florence, in beta.',
-    lead: 'TrovaVeg is available in Florence in beta. You can already use it to search for vegan, vegetarian and vegan-friendly places while coverage continues to grow.',
+      'Explore vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. Available in Florence and the province of Florence.',
+    status: 'Available',
+    headline: 'Florence, made easier.',
+    lead: 'Available in Florence and the province of Florence. Search for vegan, vegetarian and vegan-friendly places with a focused, curated selection.',
     cta: 'Search Florence',
     ctaAriaLabel: 'Search Florence in the Telegram bot',
     ctaSecondary: 'Help improve Florence',
@@ -250,9 +250,9 @@ export const en = {
     sections: [
       {
         type: 'text' as const,
-        title: 'What beta means',
+        title: 'Coverage notes',
         paragraphs: [
-          'TrovaVeg is expanding its coverage in Florence. The service is already usable, but information and coverage may be less complete than in Bologna and its province.',
+          'TrovaVeg offers a curated selection in Florence and the province of Florence. The guide is useful and focused, but not exhaustive: information may be incomplete or change over time.',
         ],
       },
       {
@@ -275,9 +275,9 @@ export const en = {
       },
       {
         type: 'text' as const,
-        title: 'A transparent beta',
+        title: 'Clear limits',
         paragraphs: [
-          'Florence is in beta. Information may be incomplete or change over time, and opening hours are not checked in real time. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
+          'Available in Florence and the province of Florence. Information may be incomplete or change over time, and opening hours are not checked in real time. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
         ],
         cta: 'Search Florence',
       },
@@ -362,7 +362,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg is available in Bologna and its province. Florence is currently in beta. More cities will follow over time.',
+            text: 'TrovaVeg is available in the provinces of Bologna and Florence. More cities will follow over time.',
           },
         ],
       },
@@ -380,7 +380,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Yes, in beta. You can already use it, but information and coverage may be less complete than in Bologna and its province.',
+            text: 'Yes. Available in Florence and the province of Florence, with a focused selection of vegan, vegetarian and vegan-friendly places.',
           },
         ],
       },
@@ -508,7 +508,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. It is not a national web map and does not claim national coverage. It is available in Bologna and its province, with Florence currently in beta.',
+            text: 'No. It is not a national web map and does not claim national coverage. TrovaVeg is available in the provinces of Bologna and Florence.',
           },
         ],
       },
@@ -588,7 +588,7 @@ export const en = {
           'The bot does not verify real-time opening status.',
           'TrovaVeg does not make bookings.',
           'For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
-          'Florence is currently in beta.',
+          'Available in Florence and the province of Florence; listings remain curated and may be incomplete.',
         ],
       },
       {
