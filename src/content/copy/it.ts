@@ -74,7 +74,7 @@ export const it = {
       },
       {
         title: 'Città e zone',
-        text: 'Bologna (città e provincia) e Firenze in beta. Zone e comuni dove disponibili.',
+        text: 'Province di Bologna e Firenze. Zone e comuni dove disponibili.',
         image: '/screenshot-citta.webp',
         alt: 'Schermata TrovaVeg con la selezione di città e zone',
       },
@@ -87,7 +87,7 @@ export const it = {
     ],
     citiesTitle: 'Dove siamo oggi',
     citiesLead:
-      'Oggi TrovaVeg è disponibile a Bologna e provincia, e a Firenze in beta.',
+      'TrovaVeg è disponibile nelle province di Bologna e Firenze.',
     cities: [
       {
         href: '/bologna/',
@@ -98,8 +98,8 @@ export const it = {
       {
         href: '/firenze/',
         name: 'Firenze',
-        status: 'Beta',
-        text: 'Beta attiva: stesse funzioni di Bologna, copertura in crescita con la community.',
+        status: 'Disponibile',
+        text: 'Disponibile a Firenze e in provincia di Firenze. Selezione essenziale di locali veg.',
       },
     ],
     citiesNote:
@@ -131,7 +131,7 @@ export const it = {
     },
     limitsTitle: 'Limiti chiari',
     limits: [
-      'Oggi solo Bologna (città/provincia) e Firenze (beta).',
+      'Oggi TrovaVeg è disponibile nelle province di Bologna e Firenze.',
       'Orari e dettagli in scheda sono indicativi, non in tempo reale. Nessuna prenotazione automatica.',
       'Non usiamo etichette di garanzia formale: puntiamo a selezione curata e trasparenza sui limiti.',
       'Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
@@ -183,10 +183,10 @@ export const it = {
   firenze: {
     metaTitle: 'Firenze',
     metaDescription:
-      'Stessa filosofia di Bologna: meno quantità, più qualità. Firenze è in beta attiva — la copertura cresce insieme alle segnalazioni.',
-    status: 'Beta',
-    headline: 'Firenze, in beta.',
-    lead: 'Stessa filosofia di Bologna: meno quantità, più qualità. Firenze è in beta attiva — la copertura cresce insieme alle segnalazioni.',
+      'Disponibile a Firenze e in provincia di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
+    status: 'Disponibile',
+    headline: 'Firenze, in tasca.',
+    lead: 'Disponibile a Firenze e in provincia di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
     cta: 'Cerca Firenze',
     ctaAriaLabel: 'Cerca Firenze nel bot Telegram',
     ctaSecondary: 'Segnala un locale',
@@ -196,14 +196,14 @@ export const it = {
       alt: 'Schermata TrovaVeg per segnalare un locale mancante a Firenze',
     },
     body: [
-      'A Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato. La selezione è in costruzione, con lo stesso standard di cura.',
-      'Non è ancora una copertura completa. È una beta onesta: meno liste infinite, più risposte utili — e spazio per migliorare con il tuo feedback.',
+      'A Firenze e in provincia di Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato, con lo stesso standard di cura.',
+      'È una selezione essenziale, non esaustiva: meno liste infinite, più risposte utili — e spazio per migliorare con le segnalazioni della community.',
       'Hai trovato un locale mancante? Apri TrovaVeg su Telegram e invia il comando /segnala. Per correggere o aggiornare le informazioni di un locale già presente, scrivici a info@trovaveg.com.',
     ],
     sections: [
       {
         type: 'list' as const,
-        title: 'Cosa puoi fare in beta',
+        title: 'Note sulla copertura',
         items: [
           'Ricerca per categoria e tipo veg',
           'Selezione città / zone dove disponibili',
@@ -291,7 +291,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Oggi TrovaVeg è disponibile a Bologna e provincia, e a Firenze in beta. Altre città arriveranno nel tempo.',
+            text: 'TrovaVeg è disponibile nelle province di Bologna e Firenze. Altre città arriveranno nel tempo.',
           },
         ],
       },
@@ -309,7 +309,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Sì, in beta. Puoi già usarlo con le stesse funzioni di Bologna, ma copertura e completezza possono essere inferiori.',
+            text: 'Sì. Disponibile a Firenze e in provincia di Firenze: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
           },
         ],
       },
@@ -437,7 +437,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. Non è una mappa web nazionale e non dichiara copertura nazionale. Oggi è disponibile a Bologna e provincia, e a Firenze in beta.',
+            text: 'No. Non è una mappa web nazionale e non dichiara copertura nazionale. TrovaVeg è disponibile nelle province di Bologna e Firenze.',
           },
         ],
       },
