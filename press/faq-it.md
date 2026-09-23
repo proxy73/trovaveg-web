@@ -8,10 +8,11 @@ Un bot Telegram indipendente che aiuta a trovare locali vegan, vegetariani e veg
 
 ## Dove è disponibile?
 
-- **Province di Bologna e Firenze:** disponibili
-- **Milano:** non disponibile (fuori scope)
+- **Bologna e provincia:** disponibili
+- **Area di Firenze:** disponibile
+- **Comune di Milano:** disponibile nel bot (solo Comune)
 
-Formulazione pubblica allineata al sito: *TrovaVeg è disponibile nelle province di Bologna e Firenze.*
+Formulazione pubblica: *TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.*
 
 ## Perché Telegram?
 
@@ -43,11 +44,11 @@ No. Non è una mappa web nazionale e non dichiara copertura nazionale.
 
 ## Firenze è completa?
 
-No. Firenze e provincia sono **disponibili**, ma la guida resta una selezione curata, non esaustiva: non dichiara catalogo completo, copertura di ogni comune né dati sempre aggiornati in tempo reale.
+No. L’area di Firenze è **disponibile**, ma la guida resta una selezione curata, non esaustiva: non dichiara catalogo completo, copertura di ogni comune né dati sempre aggiornati in tempo reale.
 
 ## Milano è disponibile?
 
-No. Milano non è disponibile ed è fuori scope.
+Sì, nel bot, **solo nel Comune di Milano**. Non sono dichiarate come coperte la provincia di Milano, l’hinterland né la Città metropolitana. La pagina sito Milano non è ancora pubblicata.
 
 ## Privacy (alto livello)
 

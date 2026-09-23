@@ -6,8 +6,11 @@ Il sito spiega il progetto e indirizza al bot Telegram. La ricerca dei locali
 avviene nel bot, non sul sito; per usarla serve Telegram. Non esiste un’app
 TrovaVeg separata e non serve un account sul sito.
 
-**Copertura attuale:** TrovaVeg è disponibile nelle province di Bologna e Firenze.
-La disponibilità non implica catalogo completo, dati in tempo reale o certificazione.
+**Copertura attuale:** TrovaVeg è disponibile a Bologna e provincia, nell’area di
+Firenze e nel solo Comune di Milano. Milano è coperta solo a livello comunale:
+provincia, hinterland e Città metropolitana non sono supportati. La
+disponibilità non implica catalogo completo, dati in tempo reale o
+certificazione. La pagina sito Milano non è ancora pubblicata.
 
 **Stack:** Astro (`output: 'static'`) · CSS nativo con design token · nessun
 database, CMS, account o backend web · hosting su Cloudflare Pages · Cloudflare
@@ -22,11 +25,13 @@ Repository: [proxy73/trovaveg-web](https://github.com/proxy73/trovaveg-web)
 |----------|-----------|
 | `/` | Home italiana |
 | `/bologna` | Bologna e provincia |
-| `/firenze` | Firenze e provincia |
+| `/firenze` | Area di Firenze |
+| `/milano` | Comune di Milano (non provincia, hinterland o Città metropolitana) |
 | `/privacy` | Privacy (IT) |
 | `/en` | Home inglese |
 | `/en/bologna` | Bologna (EN) |
-| `/en/florence` | Florence and province |
+| `/en/florence` | Florence area |
+| `/en/milan` | Municipality of Milan only |
 | `/en/privacy` | Privacy (EN) |
 | `404` | Pagina non trovata (IT, risposta 404 reale) |
 | `/en/404` | Pagina informativa 404 (EN) |

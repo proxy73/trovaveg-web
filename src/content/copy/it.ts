@@ -19,7 +19,7 @@ export const it = {
   siteChrome: {
     tagline: 'La tua guida tascabile veg',
     description:
-      'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze. Meno liste infinite, più risposte utili.',
+      'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly. TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.',
     independentNote:
       'TrovaVeg è un progetto indipendente in crescita, costruito con il supporto della community.',
   },
@@ -27,13 +27,14 @@ export const it = {
     { href: '/', label: 'Home' },
     { href: '/bologna/', label: 'Bologna' },
     { href: '/firenze/', label: 'Firenze' },
+    { href: '/milano/', label: 'Milano' },
     { href: '/faq/', label: 'FAQ' },
     { href: '/privacy/', label: 'Privacy' },
   ],
   home: {
     metaTitle: 'TrovaVeg — Locali vegan, vegetariani e vegan-friendly',
     metaDescription:
-      'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly a Bologna e Firenze. Meno liste infinite, più risposte utili.',
+      'TrovaVeg è una guida su Telegram per locali vegani, vegetariani e vegan-friendly. TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.',
     eyebrow: 'TrovaVeg',
     headline: 'Trova locali vegan, vegetariani e vegan-friendly',
     guideMessage: 'Meno liste infinite, più risposte utili.',
@@ -44,7 +45,7 @@ export const it = {
     ctaSecondary: 'Come funziona',
     heroImage: {
       src: '/screenshot-hero.webp',
-      alt: 'Schermata Telegram di TrovaVeg con il messaggio di benvenuto del bot',
+      alt: 'Schermata Telegram di TrovaVeg con messaggio di benvenuto e copertura disponibile a Bologna, Firenze e nel Comune di Milano.',
     },
     howTitle: 'Come funziona',
     howLead:
@@ -70,24 +71,24 @@ export const it = {
         title: 'Categorie',
         text: 'Ristorante, bar, panificio, gelateria e altre tipologie presenti in guida.',
         image: '/screenshot-categorie.webp',
-        alt: 'Schermata TrovaVeg con la scelta delle categorie di locali',
+        alt: 'Schermata Telegram di TrovaVeg con la scelta delle categorie di locali.',
       },
       {
         title: 'Città e zone',
-        text: 'Province di Bologna e Firenze. Zone e comuni dove disponibili.',
+        text: 'Bologna e provincia; area di Firenze; solo Comune di Milano. Zone dove disponibili.',
         image: '/screenshot-citta.webp',
-        alt: 'Schermata TrovaVeg con la selezione di città e zone',
+        alt: 'Schermata Telegram di TrovaVeg con il selettore delle città Bologna, Firenze e Milano.',
       },
       {
         title: 'Tipo veg',
         text: 'Vegano, vegetariano o vegan-friendly: filtra in base a ciò che ti serve davvero.',
         image: '/screenshot-vegstatus.webp',
-        alt: 'Schermata TrovaVeg con i filtri vegano, vegetariano e vegan-friendly',
+        alt: 'Schermata Telegram di TrovaVeg con i filtri vegano, vegetariano e vegan-friendly.',
       },
     ],
     citiesTitle: 'Dove siamo oggi',
     citiesLead:
-      'TrovaVeg è disponibile nelle province di Bologna e Firenze.',
+      'TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.',
     cities: [
       {
         href: '/bologna/',
@@ -99,7 +100,13 @@ export const it = {
         href: '/firenze/',
         name: 'Firenze',
         status: 'Disponibile',
-        text: 'Disponibile a Firenze e in provincia di Firenze. Selezione essenziale di locali veg.',
+        text: 'Disponibile nell’area di Firenze. Selezione essenziale di locali veg.',
+      },
+      {
+        href: '/milano/',
+        name: 'Milano',
+        status: 'Disponibile',
+        text: 'Comune di Milano — disponibile. Selezione essenziale di locali veg.',
       },
     ],
     citiesNote:
@@ -127,11 +134,11 @@ export const it = {
     communityCta: 'Segnala un locale sul bot',
     communityImage: {
       src: '/screenshot-segnala.webp',
-      alt: 'Schermata TrovaVeg del comando /segnala per proporre un nuovo locale',
+      alt: 'Schermata Telegram di TrovaVeg per segnalare un locale mancante.',
     },
     limitsTitle: 'Limiti chiari',
     limits: [
-      'Oggi TrovaVeg è disponibile nelle province di Bologna e Firenze.',
+      'Oggi TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.',
       'Orari e dettagli in scheda sono indicativi, non in tempo reale. Nessuna prenotazione automatica.',
       'Non usiamo etichette di garanzia formale: puntiamo a selezione curata e trasparenza sui limiti.',
       'Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale.',
@@ -160,7 +167,7 @@ export const it = {
     telegramSource: 'web_city_it' as const,
     image: {
       src: '/screenshot-citta.webp',
-      alt: 'Schermata TrovaVeg con le opzioni di città e zone per Bologna',
+      alt: 'Schermata Telegram di TrovaVeg con il selettore delle città Bologna, Firenze e Milano.',
     },
     body: [
       'A Bologna TrovaVeg funziona come guida tascabile: chiedi un ristorante, una colazione, un bar in centro o un posto vegan-friendly, e ricevi una selezione essenziale.',
@@ -183,20 +190,20 @@ export const it = {
   firenze: {
     metaTitle: 'Firenze',
     metaDescription:
-      'Disponibile a Firenze e in provincia di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
+      'Disponibile nell’area di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
     status: 'Disponibile',
     headline: 'Firenze, in tasca.',
-    lead: 'Disponibile a Firenze e in provincia di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
+    lead: 'Disponibile nell’area di Firenze. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza.',
     cta: 'Cerca Firenze',
     ctaAriaLabel: 'Cerca Firenze nel bot Telegram',
     ctaSecondary: 'Segnala un locale',
     telegramSource: 'web_city_it' as const,
     image: {
       src: '/screenshot-segnala.webp',
-      alt: 'Schermata TrovaVeg per segnalare un locale mancante a Firenze',
+      alt: 'Schermata Telegram di TrovaVeg per segnalare un locale mancante.',
     },
     body: [
-      'A Firenze e in provincia di Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato, con lo stesso standard di cura.',
+      'Nell’area di Firenze trovi le stesse funzioni del bot: ricerca libera, categorie, filtri veg e flusso guidato, con lo stesso standard di cura.',
       'È una selezione essenziale, non esaustiva: meno liste infinite, più risposte utili — e spazio per migliorare con le segnalazioni della community.',
       'Hai trovato un locale mancante? Apri TrovaVeg su Telegram e invia il comando /segnala. Per correggere o aggiornare le informazioni di un locale già presente, scrivici a info@trovaveg.com.',
     ],
@@ -207,6 +214,50 @@ export const it = {
         items: [
           'Ricerca per categoria e tipo veg',
           'Selezione città / zone dove disponibili',
+          'Segnalazione locali mancanti con il comando /segnala',
+        ],
+      },
+    ],
+  },
+  milano: {
+    metaTitle: 'Milano',
+    metaDescription:
+      'Disponibile nel Comune di Milano. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza. Provincia, hinterland e Città metropolitana non sono supportati.',
+    status: 'Disponibile',
+    headline: 'Milano, in tasca.',
+    lead: 'Disponibile nel Comune di Milano. Una selezione essenziale di locali vegani, vegetariani e vegan-friendly — meno rumore, più chiarezza. Provincia, hinterland e Città metropolitana non sono supportati.',
+    cta: 'Cerca Milano',
+    ctaAriaLabel: 'Cerca Milano nel bot Telegram',
+    ctaSecondary: 'Segnala un locale',
+    telegramSource: 'web_city_it' as const,
+    image: {
+      src: '/screenshot-citta.webp',
+      alt: 'Schermata Telegram di TrovaVeg con il selettore delle città Bologna, Firenze e Milano.',
+    },
+    body: [
+      'Nel Comune di Milano TrovaVeg funziona come guida tascabile: chiedi un locale, una categoria, un piatto, una zona o le tue preferenze, e ricevi una selezione essenziale.',
+      'Puoi cercare anche per macroarea: Milano Nord, Milano Est, Milano Sud e Milano Ovest. Non copriamo la provincia di Milano, l’hinterland né la Città metropolitana.',
+      'Le informazioni sono curate e gli orari sono indicativi. Per allergie, celiachia e contaminazioni, verifica sempre direttamente con il locale. Hai trovato un locale mancante? Apri TrovaVeg su Telegram e invia il comando /segnala. Per correggere o aggiornare le informazioni di un locale già presente, scrivici a info@trovaveg.com.',
+    ],
+    sections: [
+      {
+        type: 'examples' as const,
+        title: 'Esempi di ricerca',
+        items: [
+          'ristorante a Milano',
+          'colazione in centro',
+          'gelateria Milano Nord',
+          'solo locali 100% vegani',
+        ],
+      },
+      {
+        type: 'list' as const,
+        title: 'Note sulla copertura',
+        items: [
+          'Solo il Comune di Milano: provincia, hinterland e Città metropolitana non sono supportati',
+          'Ricerca per locale, categoria, piatto, zona e preferenze',
+          'Macroaree: Milano Nord, Milano Est, Milano Sud e Milano Ovest',
+          'Dati curati; orari indicativi; per allergie e celiachia verifica sempre col locale',
           'Segnalazione locali mancanti con il comando /segnala',
         ],
       },
@@ -291,7 +342,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg è disponibile nelle province di Bologna e Firenze. Altre città arriveranno nel tempo.',
+            text: 'TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano. Altre città arriveranno nel tempo.',
           },
         ],
       },
@@ -309,7 +360,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Sì. Disponibile a Firenze e in provincia di Firenze: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
+            text: 'Sì. Disponibile nell’area di Firenze: una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
           },
         ],
       },
@@ -318,7 +369,11 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. Milano non è disponibile ed è fuori scope.',
+            text: 'Sì. TrovaVeg è disponibile nel Comune di Milano, con una selezione essenziale di locali vegani, vegetariani e vegan-friendly.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'La provincia di Milano, l’hinterland e la Città metropolitana non sono supportati. Puoi cercare per locale, categoria, piatto, zona e preferenze, comprese le macroaree Milano Nord, Est, Sud e Ovest.',
           },
         ],
       },
@@ -437,7 +492,7 @@ export const it = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. Non è una mappa web nazionale e non dichiara copertura nazionale. TrovaVeg è disponibile nelle province di Bologna e Firenze.',
+            text: 'No. Non è una mappa web nazionale e non dichiara copertura nazionale. TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.',
           },
         ],
       },

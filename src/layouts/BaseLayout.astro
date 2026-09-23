@@ -51,7 +51,9 @@ const footerTelegramSource: WebTelegramSource | undefined =
     ? locale === 'it'
       ? 'web_home_it'
       : 'web_home_en'
-    : alternateKey === 'bologna' || alternateKey === 'florence'
+    : alternateKey === 'bologna' ||
+        alternateKey === 'florence' ||
+        alternateKey === 'milan'
       ? locale === 'it'
         ? 'web_city_it'
         : 'web_city_en'

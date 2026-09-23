@@ -38,7 +38,7 @@ Vedi [assets/README.md](./assets/README.md). Logo, icone e screenshot approvati 
 
 1. **Outreach:** solo in **M34** (2 settembre 2026, 17:30 CEST), con decisione e invio **umani**. Nessun contatto avvenuto in M33.
 2. **Gate:** M33-Z freeze **completato** (CHIUSA / PASS / FROZEN); ogni invio richiede comunque approvazione umana.
-3. **Claim:** usare esclusivamente factsheet e FAQ. No numeri utenti non verificati, primati, copertura nazionale, certificazioni, Milano disponibile, confronti nominativi con concorrenti.
+3. **Claim:** usare esclusivamente factsheet e FAQ. No numeri utenti non verificati, primati, copertura nazionale, certificazioni, Milano oltre il solo Comune, sito Milano già pubblicato, confronti nominativi con concorrenti. Il bot è disponibile nel Comune di Milano; la pagina sito Milano non è ancora pubblicata.
 4. **Privacy:** non inserire dati personali non pubblici, contatti privati, log, token o dati utenti.
 5. **Pubblicazione web:** nessuna pagina pubblica `/press`; package resta interno.
 

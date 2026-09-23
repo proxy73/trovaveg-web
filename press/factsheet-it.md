@@ -21,10 +21,12 @@ Nico è il fondatore di TrovaVeg, un progetto indipendente nato per rendere più
 | Area | Stato |
 |------|--------|
 | Bologna e provincia | Disponibili |
-| Firenze e provincia | Disponibile |
-| Milano | Non disponibile — fuori scope |
+| Area di Firenze | Disponibile |
+| Comune di Milano | Disponibile (solo Comune) |
 
-Formulazione pubblica allineata al sito: *TrovaVeg è disponibile nelle province di Bologna e Firenze.*
+Formulazione pubblica: *TrovaVeg è disponibile a Bologna e provincia, nell’area di Firenze e nel solo Comune di Milano.*
+
+Il bot è disponibile nel Comune di Milano. La pagina sito Milano non è ancora pubblicata. Non sono dichiarate come coperte la provincia di Milano, l’hinterland né la Città metropolitana.
 
 ## Funzioni reali
 
@@ -42,7 +44,7 @@ Formulazione pubblica allineata al sito: *TrovaVeg è disponibile nelle province
 - Orari e dettagli possono cambiare; per allergie, celiachia e contaminazioni va sempre verificato con il locale
 - Nessuna certificazione formale dei locali
 - Nessuna prenotazione automatica sul sito
-- Nessuna nuova città oltre alle province di Bologna e Firenze
+- Nessuna copertura dichiarata per provincia di Milano, hinterland o Città metropolitana
 
 ## Contatti e riferimenti pubblici
 
@@ -57,7 +59,8 @@ TrovaVeg **non** dichiara e **non** va descritto come:
 - mappa web nazionale
 - copertura nazionale
 - guida o database certificato / locali certificati
-- Milano disponibile
+- Milano disponibile oltre il solo Comune (provincia, hinterland o Città metropolitana)
+- pagina sito Milano già pubblicata
 - “tutti i locali”, “zero errori”, “dati sempre aggiornati”
 - “prima app italiana”, “leader” o primati non verificati
 - confronti nominativi o denigratori con altri servizi

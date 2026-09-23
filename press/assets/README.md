@@ -19,14 +19,21 @@ Gli asset sotto `logo/` e `screenshots/` sono **copie** dai file approvati in `g
 | `trovaveg-icon-white.png` | PNG RGB | fondo bianco | Solo mark |
 | `trovaveg-icon-white.svg` | SVG | fondo bianco | Preferito per stampa / ridimensionamento |
 
-### `screenshots/` (4 file)
+### `screenshots/` (11 file)
 
 | File | Uso |
 |------|-----|
-| `trovaveg-site-home-desktop-it.png` | Home sito IT (desktop) |
-| `trovaveg-bot-onboarding.png` | Onboarding bot (`/start`) |
-| `trovaveg-bot-search-bologna.png` | Risultati ricerca Bologna |
-| `trovaveg-bot-guided-search.png` | Flusso ricerca guidata |
+| `trovaveg-site-home-desktop-it.png` | Home italiana desktop aggiornata, con Bologna, Firenze e Milano |
+| `trovaveg-site-home-desktop-en.png` | Home inglese desktop, con Bologna, Florence e Milan |
+| `trovaveg-site-home-mobile-it.png` | Home italiana mobile, con Bologna, Firenze e Milano |
+| `trovaveg-site-home-mobile-en.png` | Home inglese mobile, con Bologna, Florence e Milan |
+| `trovaveg-site-milano-desktop-it.png` | Pagina Milano desktop; copertura limitata al Comune di Milano |
+| `trovaveg-site-milano-mobile-it.png` | Pagina Milano mobile; copertura limitata al Comune di Milano |
+| `trovaveg-site-milan-desktop-en.png` | Pagina Milan desktop; copertura limitata alla Municipality of Milan |
+| `trovaveg-site-milan-mobile-en.png` | Pagina Milan mobile; copertura limitata alla Municipality of Milan |
+| `trovaveg-bot-onboarding.png` | Onboarding bot (`/start`) con Bologna, Firenze e Comune di Milano |
+| `trovaveg-bot-search-bologna.png` | Esempio di ricerca Bologna |
+| `trovaveg-bot-guided-search.png` | Ricerca guidata a Milano città |
 
 ### `founder/`
 
@@ -51,6 +58,13 @@ trovaveg-icon-transparent.png
 trovaveg-icon-white.svg
 trovaveg-icon-white.png
 trovaveg-site-home-desktop-it.png
+trovaveg-site-home-desktop-en.png
+trovaveg-site-home-mobile-it.png
+trovaveg-site-home-mobile-en.png
+trovaveg-site-milano-desktop-it.png
+trovaveg-site-milano-mobile-it.png
+trovaveg-site-milan-desktop-en.png
+trovaveg-site-milan-mobile-en.png
 trovaveg-bot-onboarding.png
 trovaveg-bot-search-bologna.png
 trovaveg-bot-guided-search.png

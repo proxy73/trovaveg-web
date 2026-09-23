@@ -23,6 +23,7 @@ export const alternates: Record<string, { it: string; en: string }> = {
   home: { it: '/', en: '/en/' },
   bologna: { it: '/bologna/', en: '/en/bologna/' },
   florence: { it: '/firenze/', en: '/en/florence/' },
+  milan: { it: '/milano/', en: '/en/milan/' },
   privacy: { it: '/privacy/', en: '/en/privacy/' },
   faq: { it: '/faq/', en: '/en/faq/' },
   notFound: { it: '/404', en: '/en/404/' },

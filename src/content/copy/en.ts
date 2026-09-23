@@ -21,7 +21,7 @@ export const en = {
     description:
       'A pocket guide on Telegram for finding vegan, vegetarian and vegan-friendly places.',
     availability:
-      'TrovaVeg is available in the provinces of Bologna and Florence.',
+      'TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only.',
     independentNote:
       'TrovaVeg is an independent project that is growing with the support of its community.',
     footerCta: 'Open TrovaVeg on Telegram',
@@ -30,13 +30,14 @@ export const en = {
     { href: '/en/', label: 'Home' },
     { href: '/en/bologna/', label: 'Bologna' },
     { href: '/en/florence/', label: 'Florence' },
+    { href: '/en/milan/', label: 'Milan' },
     { href: '/en/faq/', label: 'FAQ' },
     { href: '/en/privacy/', label: 'Privacy' },
   ],
   home: {
     metaTitle: 'TrovaVeg | Find vegan, vegetarian and vegan-friendly places',
     metaDescription:
-      'Find vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. TrovaVeg is available in the provinces of Bologna and Florence.',
+      'Find vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only.',
     eyebrow: 'TrovaVeg on Telegram',
     headline: 'Find vegan, vegetarian and vegan-friendly places',
     guideMessage: 'Fewer endless lists, more useful answers.',
@@ -47,7 +48,7 @@ export const en = {
     ctaSecondary: 'How it works',
     heroImage: {
       src: '/screenshot-hero.webp',
-      alt: 'Telegram screen of TrovaVeg with the bot welcome message',
+      alt: 'Telegram screen of TrovaVeg with the welcome message and coverage available in Bologna, Florence and the Municipality of Milan.',
     },
     howTitle: 'How it works',
     howLead:
@@ -74,23 +75,24 @@ export const en = {
         title: 'Dishes and categories',
         text: 'Looking for breakfast, pizza, burgers, desserts or something else? Start from what you feel like eating.',
         image: '/screenshot-categorie.webp',
-        alt: 'TrovaVeg screen with place category choices',
+        alt: 'Telegram screen of TrovaVeg with place category choices.',
       },
       {
         title: 'Areas and towns',
         text: 'Search by neighbourhood, area, city or municipality.',
         image: '/screenshot-citta.webp',
-        alt: 'TrovaVeg screen with city and area selection',
+        alt: 'Telegram screen of TrovaVeg with the city picker for Bologna, Florence and Milan.',
       },
       {
         title: 'Your preferences',
         text: 'Look for vegan, vegetarian and vegan-friendly options.',
         image: '/screenshot-vegstatus.webp',
-        alt: 'TrovaVeg screen with vegan, vegetarian and vegan-friendly filters',
+        alt: 'Telegram screen of TrovaVeg with vegan, vegetarian and vegan-friendly filters.',
       },
     ],
     citiesTitle: 'Where to find TrovaVeg',
-    citiesLead: '',
+    citiesLead:
+      'TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only.',
     cities: [
       {
         href: '/en/bologna/',
@@ -103,8 +105,15 @@ export const en = {
         href: '/en/florence/',
         name: 'Florence',
         status: 'Available',
-        text: 'Available in Florence and the province of Florence.',
+        text: 'Available in the Florence area.',
         cta: 'Explore Florence',
+      },
+      {
+        href: '/en/milan/',
+        name: 'Municipality of Milan',
+        status: 'Available',
+        text: 'Available in the Municipality of Milan. A focused, curated selection.',
+        cta: 'Explore Milan',
       },
     ],
     citiesNote: '',
@@ -139,7 +148,7 @@ export const en = {
     communityCta: 'Open TrovaVeg on Telegram',
     communityImage: {
       src: '/screenshot-segnala.webp',
-      alt: 'TrovaVeg screen for suggesting a new place',
+      alt: 'Telegram screen of TrovaVeg for suggesting a missing place.',
     },
     limitsTitle: 'Clear limits, no surprises',
     limitsIntro:
@@ -151,7 +160,7 @@ export const en = {
       'TrovaVeg does not make bookings.',
       'Some information may be incomplete or change over time.',
       'For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
-      'TrovaVeg is available in the provinces of Bologna and Florence; the selection is curated, not exhaustive.',
+      'TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only; the selection is curated, not exhaustive.',
     ],
     finalCta: {
       title: 'Ready to find your next place?',
@@ -181,7 +190,7 @@ export const en = {
     telegramSource: 'web_city_en' as const,
     image: {
       src: '/screenshot-citta.webp',
-      alt: 'TrovaVeg screen with city and area options for Bologna',
+      alt: 'Telegram screen of TrovaVeg with the city picker for Bologna, Florence and Milan.',
     },
     body: [] as string[],
     sections: [
@@ -234,17 +243,17 @@ export const en = {
   florence: {
     metaTitle: 'Vegan, vegetarian and vegan-friendly places in Florence | TrovaVeg',
     metaDescription:
-      'Explore vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. Available in Florence and the province of Florence.',
+      'Explore vegan, vegetarian and vegan-friendly places with TrovaVeg on Telegram. Available in the Florence area.',
     status: 'Available',
     headline: 'Florence, made easier.',
-    lead: 'Available in Florence and the province of Florence. Search for vegan, vegetarian and vegan-friendly places with a focused, curated selection.',
+    lead: 'Available in the Florence area. Search for vegan, vegetarian and vegan-friendly places with a focused, curated selection.',
     cta: 'Search Florence',
     ctaAriaLabel: 'Search Florence in the Telegram bot',
     ctaSecondary: 'Help improve Florence',
     telegramSource: 'web_city_en' as const,
     image: {
       src: '/screenshot-segnala.webp',
-      alt: 'TrovaVeg screen for suggesting a missing place in Florence',
+      alt: 'Telegram screen of TrovaVeg for suggesting a missing place.',
     },
     body: [] as string[],
     sections: [
@@ -252,7 +261,7 @@ export const en = {
         type: 'text' as const,
         title: 'Coverage notes',
         paragraphs: [
-          'TrovaVeg offers a curated selection in Florence and the province of Florence. The guide is useful and focused, but not exhaustive: information may be incomplete or change over time.',
+          'TrovaVeg offers a curated selection in the Florence area. The guide is useful and focused, but not exhaustive: information may be incomplete or change over time.',
         ],
       },
       {
@@ -277,9 +286,79 @@ export const en = {
         type: 'text' as const,
         title: 'Clear limits',
         paragraphs: [
-          'Available in Florence and the province of Florence. Information may be incomplete or change over time, and opening hours are not checked in real time. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
+          'Available in the Florence area. Information may be incomplete or change over time, and opening hours are not checked in real time. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
         ],
         cta: 'Search Florence',
+      },
+    ],
+  },
+  milan: {
+    metaTitle: 'Vegan, vegetarian and vegan-friendly places in Milan | TrovaVeg',
+    metaDescription:
+      'Find vegan, vegetarian and vegan-friendly places in the Municipality of Milan with TrovaVeg on Telegram. Milan province, hinterland and the Metropolitan City are not supported.',
+    status: 'Available',
+    headline: 'Milan, made easier.',
+    lead: 'Available in the Municipality of Milan. Search for vegan, vegetarian and vegan-friendly places by venue, category, dish, area or preference. Milan province, hinterland and the Metropolitan City are not supported.',
+    cta: 'Search Milan',
+    ctaAriaLabel: 'Search Milan in the Telegram bot',
+    ctaSecondary: 'Help improve Milan',
+    telegramSource: 'web_city_en' as const,
+    image: {
+      src: '/screenshot-citta.webp',
+      alt: 'Telegram screen of TrovaVeg with the city picker for Bologna, Florence and Milan.',
+    },
+    body: [] as string[],
+    sections: [
+      {
+        type: 'text' as const,
+        title: 'Municipality of Milan only',
+        paragraphs: [
+          'Coverage is limited to the Municipality of Milan. Milan province, the hinterland and the Metropolitan City are not supported.',
+          'You can search by venue, category, dish, area and preferences, including the North, East, South and West Milan macro-areas.',
+        ],
+      },
+      {
+        type: 'examples' as const,
+        title: 'Search examples to type in Italian',
+        items: [
+          'ristorante a Milano',
+          'colazione in centro',
+          'gelateria Milano Nord',
+          'solo locali 100% vegani',
+        ],
+      },
+      {
+        type: 'text' as const,
+        title: 'Search queries in Italian',
+        paragraphs: [
+          'The bot currently understands search queries in Italian. The examples above are queries to type in Italian. TrovaVeg does not offer a full conversational experience in English.',
+        ],
+      },
+      {
+        type: 'list' as const,
+        title: 'What you can search for',
+        items: [
+          'Vegan, vegetarian and vegan-friendly places',
+          'Venues, dishes and categories',
+          'Areas and preferences, including North, East, South and West Milan',
+          'Useful available details for each place',
+        ],
+      },
+      {
+        type: 'text' as const,
+        title: 'Help improve Milan',
+        paragraphs: [
+          'Found a missing venue? Open TrovaVeg on Telegram and send the /segnala command. To correct or update information about a venue already listed, email us at info@trovaveg.com.',
+        ],
+        cta: 'Open TrovaVeg on Telegram',
+      },
+      {
+        type: 'text' as const,
+        title: 'Clear limits',
+        paragraphs: [
+          'Available in the Municipality of Milan only. Information is curated and improved over time, but details can change, and opening hours are indicative. For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
+        ],
+        cta: 'Search Milan',
       },
     ],
   },
@@ -333,7 +412,7 @@ export const en = {
           },
           {
             type: 'paragraph' as const,
-            text: 'You get a focused selection of places, not thousands of unclear links. Here are some search examples verified in the bot:',
+            text: 'You get a focused selection of places, not thousands of unclear links. The bot currently understands search queries in Italian: the examples below are queries to type in Italian. TrovaVeg does not offer a full conversational experience in English.',
           },
           {
             type: 'example' as const,
@@ -362,7 +441,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'TrovaVeg is available in the provinces of Bologna and Florence. More cities will follow over time.',
+            text: 'TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only. More cities will follow over time.',
           },
         ],
       },
@@ -380,7 +459,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'Yes. Available in Florence and the province of Florence, with a focused selection of vegan, vegetarian and vegan-friendly places.',
+            text: 'Yes. Available in the Florence area, with a focused selection of vegan, vegetarian and vegan-friendly places.',
           },
         ],
       },
@@ -389,7 +468,11 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. Milan is not available and is out of scope.',
+            text: 'Yes. TrovaVeg is available in the Municipality of Milan, with a focused selection of vegan, vegetarian and vegan-friendly places.',
+          },
+          {
+            type: 'paragraph' as const,
+            text: 'Milan province, the hinterland and the Metropolitan City are not supported. You can search by venue, category, dish, area and preferences, including the North, East, South and West Milan macro-areas. Search queries should be written in Italian.',
           },
         ],
       },
@@ -508,7 +591,7 @@ export const en = {
         answer: [
           {
             type: 'paragraph' as const,
-            text: 'No. It is not a national web map and does not claim national coverage. TrovaVeg is available in the provinces of Bologna and Florence.',
+            text: 'No. It is not a national web map and does not claim national coverage. TrovaVeg is available in Bologna and its province, the Florence area, and the Municipality of Milan only.',
           },
         ],
       },
@@ -588,7 +671,7 @@ export const en = {
           'The bot does not verify real-time opening status.',
           'TrovaVeg does not make bookings.',
           'For allergies, coeliac disease and cross-contamination, always contact the venue directly.',
-          'Available in Florence and the province of Florence; listings remain curated and may be incomplete.',
+          'Available in the Florence area; listings remain curated and may be incomplete.',
         ],
       },
       {
